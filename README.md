@@ -18,6 +18,10 @@ same order and the key metadata fields are identical, which is the definition of
 ## Quick start
 
 ```bash
+# 0. Initialize virtual environment
+cd openaire-api-contract-tests
+source .venv/bin/activate
+
 # 1. Install dependencies (Python ≥ 3.9)
 pip install -r requirements.txt
 
