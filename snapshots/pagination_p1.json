@@ -1,0 +1,85 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Chun-Hsien Wang",
+          "Pei-Yu Chien"
+        ],
+        "dateofacceptance": "2013-07-01",
+        "dois": [
+          "10.1177/0971721813489430"
+        ],
+        "objectIdentifier": "doi_dedup___::b50c0412f032abaef53dc7266f0668db",
+        "publisher": "SAGE Publications",
+        "title": "Exploring the Nanotechnology Alliances of Nanotechnology Firms: The Roles of Network Position and Technological Uncertainty"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Jeremy J. Ramsden"
+        ],
+        "dateofacceptance": "2005-03-30",
+        "dois": [
+          "10.1016/b978-0-08-096447-8.00001-6",
+          "10.1016/b978-0-12-813343-9.00002-0",
+          "10.1016/b978-0-323-39311-9.00007-8",
+          "10.1016/b978-0-8155-2023-8.00012-1",
+          "10.1016/b978-1-4557-3189-3.00001-4",
+          "10.4024/n03ra05/01.01"
+        ],
+        "objectIdentifier": "doi_dedup___::339f4dc8cadbbfb6db4774f88a04ef33",
+        "publisher": "Elsevier BV",
+        "title": "What is Nanotechnology?"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [],
+        "dateofacceptance": "2005-03-11",
+        "dois": [
+          "10.1002/0470021071"
+        ],
+        "objectIdentifier": "doi_dedup___::445103b2c934831daba0a6cefe216860",
+        "publisher": "Wiley",
+        "title": "Nanotechnology"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Hun-Gi Hong",
+          "Hyun-Jung Kim"
+        ],
+        "dateofacceptance": "2010-10-20",
+        "dois": [
+          "10.5012/jkcs.2010.54.5.633"
+        ],
+        "objectIdentifier": "doi_dedup___::3ea4f1c075b23d0f3ab3cfc3f62bf157",
+        "publisher": "Korean Chemical Society",
+        "title": "Science Teachers' Perception and Attitudes toward Nanotechnology"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Bing Sheu",
+          "Xiaoning Jiang"
+        ],
+        "dateofacceptance": "2021-06-01",
+        "dois": [
+          "10.1109/mnano.2021.3066232"
+        ],
+        "objectIdentifier": "doi_dedup___::c8227e97b844df2979e96ac65ea634c7",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "title": "The Advancement of Nanotechnology [The Editors' Desk]"
+      }
+    ],
+    "size": null,
+    "total": 161524
+  },
+  "params": {
+    "keywords": "nanotechnology",
+    "page": "1",
+    "size": "5"
+  }
+}

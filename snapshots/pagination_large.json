@@ -1,0 +1,710 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Chun-Hsien Wang",
+          "Pei-Yu Chien"
+        ],
+        "dateofacceptance": "2013-07-01",
+        "dois": [
+          "10.1177/0971721813489430"
+        ],
+        "objectIdentifier": "doi_dedup___::b50c0412f032abaef53dc7266f0668db",
+        "publisher": "SAGE Publications",
+        "title": "Exploring the Nanotechnology Alliances of Nanotechnology Firms: The Roles of Network Position and Technological Uncertainty"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Jeremy J. Ramsden"
+        ],
+        "dateofacceptance": "2005-03-30",
+        "dois": [
+          "10.1016/b978-0-08-096447-8.00001-6",
+          "10.1016/b978-0-12-813343-9.00002-0",
+          "10.1016/b978-0-323-39311-9.00007-8",
+          "10.1016/b978-0-8155-2023-8.00012-1",
+          "10.1016/b978-1-4557-3189-3.00001-4",
+          "10.4024/n03ra05/01.01"
+        ],
+        "objectIdentifier": "doi_dedup___::339f4dc8cadbbfb6db4774f88a04ef33",
+        "publisher": "Elsevier BV",
+        "title": "What is Nanotechnology?"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [],
+        "dateofacceptance": "2005-03-11",
+        "dois": [
+          "10.1002/0470021071"
+        ],
+        "objectIdentifier": "doi_dedup___::445103b2c934831daba0a6cefe216860",
+        "publisher": "Wiley",
+        "title": "Nanotechnology"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Hun-Gi Hong",
+          "Hyun-Jung Kim"
+        ],
+        "dateofacceptance": "2010-10-20",
+        "dois": [
+          "10.5012/jkcs.2010.54.5.633"
+        ],
+        "objectIdentifier": "doi_dedup___::3ea4f1c075b23d0f3ab3cfc3f62bf157",
+        "publisher": "Korean Chemical Society",
+        "title": "Science Teachers' Perception and Attitudes toward Nanotechnology"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Bing Sheu",
+          "Xiaoning Jiang"
+        ],
+        "dateofacceptance": "2021-06-01",
+        "dois": [
+          "10.1109/mnano.2021.3066232"
+        ],
+        "objectIdentifier": "doi_dedup___::c8227e97b844df2979e96ac65ea634c7",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "title": "The Advancement of Nanotechnology [The Editors' Desk]"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [],
+        "dateofacceptance": "2009-01-01",
+        "dois": [
+          "10.1007/978-0-387-77667-5"
+        ],
+        "objectIdentifier": "doi_dedup___::bf329267eb71a71086690da2a02cb701",
+        "publisher": "Springer New York",
+        "title": "Nanotechnology in Drug Delivery"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Sohail Anwar"
+        ],
+        "dateofacceptance": "2010-06-15",
+        "dois": [
+          "10.1201/ebk1420053258-17",
+          "10.1201/ebk1420053258-c17"
+        ],
+        "objectIdentifier": "doi_dedup___::c56cc721abfd77eeeb6e3eaba22fcb59",
+        "publisher": "Informa UK Limited",
+        "title": "Commercialization of Nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Brian Masara",
+          "John Andrew van der Poll",
+          "Malik Maaza"
+        ],
+        "dateofacceptance": "2021-02-27",
+        "dois": [
+          "10.1007/s11051-021-05150-3"
+        ],
+        "objectIdentifier": "doi_dedup___::ecb277db0453f748769ea775bd1fa51b",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "The “Nanotechnology Innovation Diamond”, a model for successful nanoscience research and development"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Khai Ern Lee",
+          "Kim Shyong Siow",
+          "Nur Aizat Kamarulzaman"
+        ],
+        "dateofacceptance": "2020-01-01",
+        "dois": [
+          "10.1007/978-3-030-34568-6_1"
+        ],
+        "objectIdentifier": "doi_dedup___::5ad687598d958835680ab3231ec3077d",
+        "publisher": "Springer International Publishing",
+        "title": "Understanding Public Benefit and Risk Perceptions Through Psychological and Sociological Aspects for Sustainable Nanotechnology Development in Malaysia"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Sean Becker"
+        ],
+        "dateofacceptance": "2013-04-04",
+        "dois": [
+          "10.1007/s11051-013-1426-7"
+        ],
+        "objectIdentifier": "doi_dedup___::709079d10f0cd276cc879d03bea035e9",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Nanotechnology in the marketplace: how the nanotechnology industry views risk"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Baker, Syed",
+          "Gayathri Agarwal",
+          "Kumar, Ashish",
+          "Niranjan Raj"
+        ],
+        "dateofacceptance": "2025-01-01",
+        "dois": [
+          "10.13140/rg.2.2.14902.82244"
+        ],
+        "objectIdentifier": "doi_________::2192580d7d1ea224d97a7f8ee54256ba",
+        "publisher": "Unpublished",
+        "title": "ADVANCEMENT OF NANOTECHNOLOGY FOR EARLY DETECTION OF PATHOGENS Advancement of Nanotechnology for Early Detection of Pathogens ADVANCEMENT OF NANOTECHNOLOGY FOR EARLY DETECTION OF PATHOGENS Advancement of Nanotechnology for Early Detection of Pathogens CHAPTER -1 INTRODUCTION Advancement of Nanotechnology for Early Detection of Pathogens CHAPTER -1"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Dr. Sanjay Soni"
+        ],
+        "dateofacceptance": "2024-01-01",
+        "dois": [
+          "10.5281/zenodo.14555520",
+          "10.5281/zenodo.14555521"
+        ],
+        "objectIdentifier": "doi_dedup___::814be6f97477a68ce2dee6aee358a710",
+        "publisher": "Zenodo",
+        "title": "Application of Nanotechnology-A review Paper"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Anthony Dudo",
+          "Dietram A. Scheufele",
+          "Doo-Hun Choi"
+        ],
+        "dateofacceptance": "2012-04-10",
+        "dois": [
+          "10.1007/978-94-007-1787-9_4"
+        ],
+        "objectIdentifier": "doi_dedup___::e5da14cc7078328a60645bf2dc93da55",
+        "publisher": "Springer Netherlands",
+        "title": "U.S. News Coverage of Neuroscience Nanotechnology: How U.S. Newspapers Have Covered Neuroscience Nanotechnology During the Last Decade"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "N Sadrieh",
+          "T Miller"
+        ],
+        "dateofacceptance": "2006-12-19",
+        "dois": [
+          "10.1201/9781420006636-8",
+          "10.1201/9781420006636.ch8"
+        ],
+        "objectIdentifier": "doi_dedup___::01445cbacb04fdab5b359e4498d0d617",
+        "publisher": "Informa UK Limited",
+        "title": "Nanotechnology: Regulatory Perspective for Drug Development in Cancer Therapeutics"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Andre Girard",
+          "Moshe Oron"
+        ],
+        "dateofacceptance": "2010-06-15",
+        "dois": [
+          "10.1201/ebk1420053258-3",
+          "10.1201/ebk1420053258-c3"
+        ],
+        "objectIdentifier": "doi_dedup___::ba1e98a162ab8b3d1de328e642772038",
+        "publisher": "Informa UK Limited",
+        "title": "Nanotechnology in Fiber-Optic Telecommunications: Power-Control Applications"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Boxi Wang",
+          "Boxuan Zhu",
+          "Tianyu Wang",
+          "Yizhe Sun"
+        ],
+        "dateofacceptance": "2023-01-31",
+        "dois": [
+          "10.54097/hset.v29i.4555"
+        ],
+        "objectIdentifier": "doi_________::8f21232f9b88c8670ff0edeb9536dee8",
+        "publisher": "Darcy & Roy Press Co. Ltd.",
+        "title": "Various Nanotechnology Applied in Practical Electric Vehicles"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Jeremy J. Ramsden"
+        ],
+        "dateofacceptance": "2011-01-01",
+        "dois": [
+          "10.1016/b978-0-08-096447-8.00012-0",
+          "10.1016/b978-0-323-39311-9.00018-2",
+          "10.4024/n02ra11a.ntp.06.03",
+          "10.4024/n02ra11a.ntp.07.01"
+        ],
+        "objectIdentifier": "doi_dedup___::9173caa703e4fae1838b52ab8a7cc9dc",
+        "publisher": "Rotherham Press",
+        "title": "The impacts of nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Adnan, Nasir"
+        ],
+        "dateofacceptance": "2010-07-01",
+        "dois": [
+          "10.1016/j.clindermatol.2009.06.005"
+        ],
+        "objectIdentifier": "doi_dedup___::600cafe6ab5d36d6ade503e2eafccc86",
+        "publisher": "Elsevier BV",
+        "title": "Nanotechnology and dermatology: Part I—potential of nanotechnology"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Dilber Ulas",
+          "Hatice Calipinar"
+        ],
+        "dateofacceptance": "2019-01-01",
+        "dois": [
+          "10.1016/j.procs.2019.09.142"
+        ],
+        "objectIdentifier": "doi_dedup___::ea659ecc4e2b972b3842322355fc93be",
+        "publisher": "Elsevier BV",
+        "title": "Development of Nanotechnology in the World and Nanotechnology Standards in Turkey"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Do, D. (Duy)",
+          "Woodson, T. (Thomas)"
+        ],
+        "dateofacceptance": "2015-02-20",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::f586a4cb5a28ebed5e94df346e276447",
+        "publisher": "",
+        "title": "Nanotechnology companies in the United States"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Bostrom, Ann",
+          "Löfstedt, Ragnar"
+        ],
+        "dateofacceptance": "2017-12-19",
+        "dois": [
+          "10.1201/9781315216799-9"
+        ],
+        "objectIdentifier": "doi_dedup___::87171061da501dfe6fdfb85347a130b1",
+        "publisher": "Informa UK Limited",
+        "title": "Nanotechnology Risk Communication"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Andrew, Moon",
+          "Sakthivel Rajan, Rajaram Manoharan",
+          "Surabhi, Subramanian",
+          "Vibhu Krishnan, Viswanathan"
+        ],
+        "dateofacceptance": "2019-03-01",
+        "dois": [
+          "10.1016/j.wneu.2018.11.035"
+        ],
+        "objectIdentifier": "doi_dedup___::6e69bfc1bbc1a9883ac00fca639667a5",
+        "publisher": "Elsevier BV",
+        "title": "Nanotechnology in Spine Surgery: A Current Update and Critical Review of the Literature"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Baogui Du",
+          "Hyonchol Ri",
+          "Jonghyok Pak"
+        ],
+        "dateofacceptance": "2021-02-01",
+        "dois": [
+          "10.1109/pmis52742.2021.00093"
+        ],
+        "objectIdentifier": "doi_dedup___::1bb2491cf83005c1388a5a2daf475773",
+        "publisher": "IEEE",
+        "title": "Analysis on the process and the development elements of nanotechnology industrialization"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Lewin, Peter Marius Etienne"
+        ],
+        "dateofacceptance": "2014-01-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::f0a260a9ffdd5a4bc9dab5f00646efd1",
+        "publisher": "",
+        "title": "Technology Transfer: The Case of Nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Anna M. Waldron",
+          "Carl A. Batt",
+          "Clarissa S. Lui"
+        ],
+        "dateofacceptance": "2011-09-10",
+        "dois": [
+          "10.1007/s11051-011-0525-6"
+        ],
+        "objectIdentifier": "doi_dedup___::a1380a1790c4e6044f288f0917f23555",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Determining the efficacy of a nanotechnology media product in enhancing children’s engagement with nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Deb Newberry",
+          "Walt Trybula"
+        ],
+        "dateofacceptance": "2013-01-01",
+        "dois": [
+          "10.1016/b978-0-443-15904-6.00016-2",
+          "10.1016/b978-0-444-59438-9.00014-x"
+        ],
+        "objectIdentifier": "doi_dedup___::d48b15b4f597460ae35baf20e4f514ba",
+        "publisher": "Elsevier BV",
+        "title": "Nanotechnology risk assessment"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Chun-Chuan Chang",
+          "Fu-Mei Lin",
+          "Jang-Long Lin",
+          "Jong-Ching Wu",
+          "Lance Horng",
+          "Yu-Der Wen",
+          "Yu-Tai Shih"
+        ],
+        "dateofacceptance": "2011-08-01",
+        "dois": [
+          "10.1109/nano.2011.6144470"
+        ],
+        "objectIdentifier": "doi_dedup___::d958a560a59ee4884d8e813522be3f13",
+        "publisher": "IEEE",
+        "title": "Construction of concepts and proposition statements in high school nanotechnology curriculum"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "D.T Sakhare"
+        ],
+        "dateofacceptance": "2022-02-26",
+        "dois": [
+          "10.37896/ymer21.02/59"
+        ],
+        "objectIdentifier": "doi_________::ef99b8eb643d237cba9f17820434c1d1",
+        "publisher": "Engineering Skill Development",
+        "title": "Nanotechnology Applications in Science and Technology"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [],
+        "dateofacceptance": "2008-01-01",
+        "dois": [
+          "10.34944/dspace/6338"
+        ],
+        "objectIdentifier": "doi_________::ccf4e55d225dd8a7d5c280dc416d8eb5",
+        "publisher": "My University",
+        "title": "Nanotechnology Governance"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [],
+        "dateofacceptance": "2008-01-01",
+        "dois": [
+          "10.1007/978-1-4020-8649-6"
+        ],
+        "objectIdentifier": "doi_dedup___::865850a8d6f2a53cdcff8e0e945c9953",
+        "publisher": "Springer Netherlands",
+        "title": "Emerging Conceptual, Ethical and Policy Issues in Bionanotechnology"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Gamal S. Ahmed"
+        ],
+        "dateofacceptance": "2012-07-01",
+        "dois": [
+          "10.4018/jicte.2012070107"
+        ],
+        "objectIdentifier": "doi_dedup___::7a8b0eca784fcef9ad27754fab42f790",
+        "publisher": "IGI Global",
+        "title": "Modern Concepts in the Curriculum and the Teaching of Nanotechnology"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Ouellette, Lisa Larrimore."
+        ],
+        "dateofacceptance": "2023-01-01",
+        "dois": [
+          "10.2139/ssrn.4434147",
+          "10.34667/tind.28904"
+        ],
+        "objectIdentifier": "doi_dedup___::798b18493d21bbaaffc8de3f7f7cc0d7",
+        "publisher": "Elsevier BV",
+        "title": "Economic growth and breakthrough innovations: A case study of nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Karem H, Alzoubi",
+          "Mahmoud M, AbuAlSamen",
+          "Nusaiba K, Al-Nemrawi"
+        ],
+        "dateofacceptance": "2020-03-01",
+        "dois": [
+          "10.1016/j.cptl.2019.12.003"
+        ],
+        "objectIdentifier": "doi_dedup___::bc2183e243ebf1d373ccac3abad86750",
+        "publisher": "Elsevier BV",
+        "title": "Awareness about nanotechnology and its applications in drug industry among pharmacy students"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Jose Hugo Garcia"
+        ],
+        "dateofacceptance": "2019-04-10",
+        "dois": [
+          "10.32388/323963"
+        ],
+        "objectIdentifier": "doi_________::0981495a781dd61897b15ad1e5fff713",
+        "publisher": "Qeios",
+        "title": "Spintronics"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Deborah Bennett",
+          "Heidi A. Diefes‐Dux",
+          "Melissa Dyehouse",
+          "P.K. Imbrie"
+        ],
+        "dateofacceptance": "2007-01-01",
+        "dois": [
+          "10.2134/jnrlse2007.36158x"
+        ],
+        "objectIdentifier": "doi_dedup___::c01830f26a3e124da8e5fc3b02447665",
+        "publisher": "Wiley",
+        "title": "Nanotechnology Awareness of First‐Year Food and Agriculture Students following a Brief Exposure"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [],
+        "dateofacceptance": "2013-07-09",
+        "dois": [
+          "10.1201/b15152-26"
+        ],
+        "objectIdentifier": "doi_dedup___::0e8a68591c490109606aadc16c2ad021",
+        "publisher": "Informa UK Limited",
+        "title": "DNA Nanotechnology as Reference for RNA Nanotechnology"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Jo Anne Shatkin"
+        ],
+        "dateofacceptance": "2008-04-24",
+        "dois": [
+          "10.1201/9781315216799-6",
+          "10.1201/9781420053647.ch6"
+        ],
+        "objectIdentifier": "doi_dedup___::3847a6c7dcf08a2bf427552762c79dfa",
+        "publisher": "Informa UK Limited",
+        "title": "Nano LCRA: An Adaptive Screening-Level Life Cycle Risk-Assessment Framework for Nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Hao Wu",
+          "Li Zhi Gu",
+          "Peng Lei",
+          "Qi Hong",
+          "Xiao Jun Jie"
+        ],
+        "dateofacceptance": "2010-10-01",
+        "dois": [
+          "10.4028/www.scientific.net/amr.148-149.498"
+        ],
+        "objectIdentifier": "doi_dedup___::d8364d423ab1af8c249ea69a5b1dbf59",
+        "publisher": "Trans Tech Publications, Ltd.",
+        "title": "The Application of Nanotechnology for Green Manufacturing"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Carmen, Keller",
+          "Hans, Kastenholz",
+          "Michael, Siegrist",
+          "Nathalie, Stampfli"
+        ],
+        "dateofacceptance": "2008-09-01",
+        "dois": [
+          "10.1016/j.appet.2008.02.020"
+        ],
+        "objectIdentifier": "doi_dedup___::a914385fb046b00a372c703c10a524de",
+        "publisher": "Elsevier BV",
+        "title": "Perceived risks and perceived benefits of different nanotechnology foods and nanotechnology food packaging"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Baoquan Ding",
+          "Zhen-Gang Wang"
+        ],
+        "dateofacceptance": "2013-06-19",
+        "dois": [
+          "10.1201/b15152-23"
+        ],
+        "objectIdentifier": "doi_dedup___::76e1c62c8f480335bd3de18584770a28",
+        "publisher": "Informa UK Limited",
+        "title": "DNA Nanotechnology as Reference for RNA Nanotechnology"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Yu-Ling Lan"
+        ],
+        "dateofacceptance": "2012-05-01",
+        "dois": [
+          "10.1080/09500693.2011.651657"
+        ],
+        "objectIdentifier": "doi_dedup___::b288b713a596a8d5989fad9f33264983",
+        "publisher": "Informa UK Limited",
+        "title": "Development of an Attitude Scale to Assess K-12 Teachers' Attitudes toward Nanotechnology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "G Louis, Hornyak"
+        ],
+        "dateofacceptance": "2005-04-01",
+        "dois": [
+          "10.1016/j.otc.2004.10.008"
+        ],
+        "objectIdentifier": "doi_dedup___::3cf64e0b95bcef94414d608c4f252c88",
+        "publisher": "Elsevier BV",
+        "title": "Nanotechnology in Otolaryngology"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [],
+        "dateofacceptance": "2011-01-01",
+        "dois": [
+          "10.1007/978-1-4419-7291-0"
+        ],
+        "objectIdentifier": "doi_dedup___::b3637b775469739aa5d72fee60f3b73d",
+        "publisher": "Springer New York",
+        "title": "Nanotechnology Enabled In situ Sensors for Monitoring Health"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "E. Heydari",
+          "S. Ghazinoory"
+        ],
+        "dateofacceptance": "2008-01-01",
+        "dois": [
+          "10.1109/mts.2008.930886"
+        ],
+        "objectIdentifier": "doi_dedup___::6fe81577e13411cb138d9f65d754b9a3",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "title": "Potential impacts of nanotechnology development in Iran"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [],
+        "dateofacceptance": "2007-11-19",
+        "dois": [
+          "10.1201/9780849383168"
+        ],
+        "objectIdentifier": "doi_dedup___::215b0ade395d06f947664c39323d2918",
+        "publisher": "Informa UK Limited",
+        "title": "Commercializing Micro-Nanotechnology Products"
+      },
+      {
+        "bestaccessright": "RESTRICTED",
+        "creators": [
+          "Jamison, Andrew"
+        ],
+        "dateofacceptance": "2005-01-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::0b220911144be50b0fefca3afe0fea17",
+        "publisher": "Icfai University Press",
+        "title": "On Nanotechnology and Society"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "WHC Knol"
+        ],
+        "dateofacceptance": "2005-01-03",
+        "dois": [],
+        "objectIdentifier": "od_______645::e3be23bb665b6654822c970b322a53cd",
+        "publisher": "",
+        "title": "Nanotechnology and business opportunities: scenarios as awareness instrument"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "N. Yokoyama"
+        ],
+        "dateofacceptance": "2004-11-09",
+        "dois": [
+          "10.1109/vtsa.2003.1252602"
+        ],
+        "objectIdentifier": "doi_dedup___::476c2417ef908b885e7d05e8b5984b56",
+        "publisher": "IEEE",
+        "title": "Strategy of nanotechnology R &amp; D in Japan -recent topics of nanotechnology research at Fujitsu"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Alem Coşgun",
+          "Erdal Senocak",
+          "Hüseyin Hatırlı",
+          "Işıl Sarıkaya"
+        ],
+        "dateofacceptance": "2022-02-03",
+        "dois": [
+          "10.21203/rs.3.rs-1255813/v1"
+        ],
+        "objectIdentifier": "doi_________::3a159d736c0ee1404b9bbc65002ea636",
+        "publisher": "Research Square Platform LLC",
+        "title": "Dental Students’ Emotions, Knowledge, Awareness And Learning Intention On The Applications of Nanotechnology In Dentistry"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Ranjita, Misra",
+          "Sanjeeb K, Sahoo",
+          "Sarbari, Acharya"
+        ],
+        "dateofacceptance": "2010-10-01",
+        "dois": [
+          "10.1016/j.drudis.2010.08.006"
+        ],
+        "objectIdentifier": "doi_dedup___::58febcf05bb2469a1ac6723d26088037",
+        "publisher": "Elsevier BV",
+        "title": "Cancer nanotechnology: application of nanotechnology in cancer therapy"
+      }
+    ],
+    "size": null,
+    "total": 161524
+  },
+  "params": {
+    "keywords": "nanotechnology",
+    "page": "1",
+    "size": "50"
+  }
+}

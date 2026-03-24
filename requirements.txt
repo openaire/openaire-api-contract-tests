@@ -1,0 +1,4 @@
+requests>=2.31,<3
+pytest>=7.4,<9
+deepdiff>=6.7,<9
+lxml>=4.9,<6

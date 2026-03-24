@@ -1,0 +1,159 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Young Chan"
+        ],
+        "dateofacceptance": "2025-10-30",
+        "dois": [
+          "10.1177/13505076251377550"
+        ],
+        "objectIdentifier": "doi_________::a7cbf8a5e083cafd98a9c411719aa892",
+        "publisher": "SAGE Publications",
+        "title": "Advancing knowledge synthesis in management learning: Literature review assisted by artificial intelligence"
+      },
+      {
+        "bestaccessright": "RESTRICTED",
+        "creators": [
+          "Bellazzi, R",
+          "Holmes, JH",
+          "Peek, N",
+          "Sacchi, L"
+        ],
+        "dateofacceptance": "2015-06-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::3d3d8fd12343742f04d9dedafb52baea",
+        "publisher": "Springer Nature",
+        "title": "Artificial Intelligence in Medicine"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Matthew Howard",
+          "Roshana Mehdian"
+        ],
+        "dateofacceptance": "2021-01-01",
+        "dois": [
+          "10.1007/978-3-030-58080-3_256-1",
+          "10.1007/978-3-030-64573-1_256"
+        ],
+        "objectIdentifier": "doi_dedup___::0083b29b4763c0d0f66d82a247fce642",
+        "publisher": "Springer International Publishing",
+        "title": "Artificial Intelligence in Trauma and Orthopaedics"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Amy Owens",
+          "Doratha Vinkemeier",
+          "Hany Elsheikha"
+        ],
+        "dateofacceptance": "2023-06-02",
+        "dois": [
+          "10.12968/coan.2022.0028a"
+        ],
+        "objectIdentifier": "doi_________::6bf9269eb10296cda2cd5fe2e2b1d983",
+        "publisher": "Mark Allen Group",
+        "title": "A review of applications of artificial intelligence in veterinary medicine"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Ariwa, Ezendu",
+          "K., Hemachandran",
+          "Sravya, Pingili"
+        ],
+        "dateofacceptance": "2023-11-23",
+        "dois": [
+          "10.2174/9789815165739123010005"
+        ],
+        "objectIdentifier": "doi_dedup___::fb05d05ffa8d83dcef9a7e51bd24c255",
+        "publisher": "BENTHAM SCIENCE PUBLISHERS",
+        "title": "Applications of Artificial Intelligence in Robotics"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Cave, Stephen",
+          "Dihal, Kanta",
+          "Drage, Eleanor",
+          "Mackereth, Kerry"
+        ],
+        "dateofacceptance": "2023-01-24",
+        "dois": [
+          "10.17863/cam.93090"
+        ],
+        "objectIdentifier": "doi_dedup___::70d076115becace210ba525f8c53a810",
+        "publisher": "SAGE Publications",
+        "title": "Who makes AI? Gender and portrayals of artificial intelligence scientists in popular film, 1920–2020"
+      },
+      {
+        "bestaccessright": "RESTRICTED",
+        "creators": [
+          "McKeown, Gary"
+        ],
+        "dateofacceptance": "2010-01-01",
+        "dois": [],
+        "objectIdentifier": "od______2607::27e6984e46c129acb4df2d7c6851379e",
+        "publisher": "",
+        "title": "Considering Social and Emotional Artificial Intelligence"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "O'Connor, Siobhan"
+        ],
+        "dateofacceptance": "2022-10-01",
+        "dois": [
+          "10.1016/j.nepr.2022.103451"
+        ],
+        "objectIdentifier": "doi_dedup___::a8e7560d0385dd4715d0e2706bc53913",
+        "publisher": "Elsevier BV",
+        "title": "Teaching artificial intelligence to nursing and midwifery students"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Adekunle Oke",
+          "Birago Amofa",
+          "Faith Jeremiah",
+          "Fatima Araujo Pereira Fernandes",
+          "Oluyomi Abayomi Osobajo",
+          "Xebiso Blessing Kamudyariwa"
+        ],
+        "dateofacceptance": "2025-06-29",
+        "dois": [
+          "10.3390/educsci15070826"
+        ],
+        "objectIdentifier": "doi_dedup___::d50ad43e4e545994d753d6f77a61de5a",
+        "publisher": "MDPI AG",
+        "title": "Navigating the Complexity of Generative Artificial Intelligence in Higher Education: A Systematic Literature Review"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Dr. Reena Gupta",
+          "Vivek Kumar"
+        ],
+        "dateofacceptance": "2023-12-31",
+        "dois": [
+          "10.31995/jgv.2023.v14is3.005"
+        ],
+        "objectIdentifier": "doi_________::e37083b143c6d3d05c93dfddcaa7c274",
+        "publisher": "Anu Books",
+        "title": "Role of Artificial Intelligence in Different Sectors of Society"
+      }
+    ],
+    "size": null,
+    "total": 53460
+  },
+  "params": {
+    "country": "GB",
+    "keywords": "artificial intelligence",
+    "page": "1",
+    "size": "10"
+  }
+}

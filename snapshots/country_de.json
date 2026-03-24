@@ -1,0 +1,157 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Marianne Darbi"
+        ],
+        "dateofacceptance": "2020-01-01",
+        "dois": [
+          "10.1007/978-3-030-25594-7_6"
+        ],
+        "objectIdentifier": "doi_dedup___::94ed4271f8eb72269e14594f6c30e64e",
+        "publisher": "Springer International Publishing",
+        "title": "Illustrative Case Studies for Different Types of Biodiversity Offsets"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Leonie Ratzke"
+        ],
+        "dateofacceptance": "2022-01-01",
+        "dois": [
+          "10.1016/j.ecolecon.2023.107884",
+          "10.2139/ssrn.4257771"
+        ],
+        "objectIdentifier": "doi_dedup___::416c40bba59875283bb2cbd13dded9f8",
+        "publisher": "Elsevier BV",
+        "title": "Revealing preferences for urban biodiversity as an environmental good"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Florian Fiebelkorn",
+          "Susanne Menzel"
+        ],
+        "dateofacceptance": "2012-11-20",
+        "dois": [
+          "10.1007/s11165-012-9323-0"
+        ],
+        "objectIdentifier": "doi_dedup___::809b2c1b6d29eee58764c86047568b5d",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Student Teachers’ Understanding of the Terminology, Distribution, and Loss of Biodiversity: Perspectives from a Biodiversity Hotspot and an Industrialized Country"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Kalmey, Tim",
+          "Meya, Jasper N.",
+          "Sager, Lutz"
+        ],
+        "dateofacceptance": "2025-01-01",
+        "dois": [
+          "10.2139/ssrn.5390067"
+        ],
+        "objectIdentifier": "doi_dedup___::1cca37611d6b58a3c91ad1a8ece06a19",
+        "publisher": "Elsevier BV",
+        "title": "Biodiversity Engel Curves: Estimating How Income and Inequality Shape Consumption-driven Biodiversity Loss"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Friele, Minou",
+          "Lanzerath, Dirk",
+          "Schepers, Gesine"
+        ],
+        "dateofacceptance": "2014-01-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::159af2e6f1caf6a3dc2f3f9918ffde44",
+        "publisher": "Routledge",
+        "title": "Protection of biodiversity for the sake of science?"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Andrey Lessa Derci Augustynczik",
+          "Marc Hanewinkel",
+          "Rasoul Yousefpour"
+        ],
+        "dateofacceptance": "2019-09-01",
+        "dois": [
+          "10.1016/j.jenvman.2019.05.089"
+        ],
+        "objectIdentifier": "doi_dedup___::fe3515ec14bec07b01ee9c3df6c4a5c9",
+        "publisher": "Elsevier BV",
+        "title": "Climate change and the provision of biodiversity in public temperate forests – A mechanism design approach for the implementation of biodiversity conservation policies"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Gerhard Wiegleb",
+          "Udo Bröring"
+        ],
+        "dateofacceptance": "2006-02-20",
+        "dois": [
+          "10.1007/3-540-27134-1_36"
+        ],
+        "objectIdentifier": "doi_dedup___::417c0d04184bf67e42bf625a088a4bc5",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Assessing Biodiversity in SEA"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Nico, Eisenhauer"
+        ],
+        "dateofacceptance": "2024-06-01",
+        "dois": [
+          "10.1016/j.cub.2024.04.075"
+        ],
+        "objectIdentifier": "doi_dedup___::66ac474ec904e68df0157a5e706350e7",
+        "publisher": "Elsevier BV",
+        "title": "Ecology: Operationalize biodiversity theory"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Franz X. Bogner",
+          "Jennifer Schneiderhan-Opel"
+        ],
+        "dateofacceptance": "2020-04-01",
+        "dois": [
+          "10.1525/abt.2020.82.4.234"
+        ],
+        "objectIdentifier": "doi_dedup___::e42ddc02a9534106a7cb569bc36789b3",
+        "publisher": "University of California Press",
+        "title": "FutureForest: Promoting Biodiversity Literacy by Implementing Citizen Science in the Classroom"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Bernard, Barbara",
+          "Hummel, Diana",
+          "Liehr, Stefan",
+          "Lux, Alexandra",
+          "Mehring, Marion"
+        ],
+        "dateofacceptance": "2017-01-01",
+        "dois": [
+          "10.1080/21513732.2017.1289246"
+        ],
+        "objectIdentifier": "doi_dedup___::8f03fc48f5a6b7ed35dd407791301ced",
+        "publisher": "Informa UK Limited",
+        "title": "Halting biodiversity loss: how social–ecological biodiversity research makes a difference"
+      }
+    ],
+    "size": null,
+    "total": 37849
+  },
+  "params": {
+    "country": "DE",
+    "keywords": "biodiversity",
+    "page": "1",
+    "size": "10"
+  }
+}

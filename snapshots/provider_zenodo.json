@@ -1,0 +1,163 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Zacchiroli, Stefano"
+        ],
+        "dateofacceptance": "2020-07-03",
+        "dois": [
+          "10.5281/zenodo.17939200",
+          "10.5281/zenodo.17939201"
+        ],
+        "objectIdentifier": "doi_dedup___::137eb85f7513b00f839cc4d7f611ff5a",
+        "publisher": "Zenodo",
+        "title": "Global Software Health: An Unified View of how our Software Commons is Doing"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Gruenpeter, Morane",
+          "Software Heritage"
+        ],
+        "dateofacceptance": "2021-06-21",
+        "dois": [
+          "10.5281/zenodo.15805324",
+          "10.5281/zenodo.15805325"
+        ],
+        "objectIdentifier": "doi_dedup___::3ebb54c8cd112fee471812ba71c7a682",
+        "publisher": "Zenodo",
+        "title": "Software Heritage: Legacy Software Archival - An Archeology Rescue Mission"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Dandrimont, Nicolas",
+          "Software Heritage"
+        ],
+        "dateofacceptance": "2023-09-10",
+        "dois": [
+          "10.5281/zenodo.15799920",
+          "10.5281/zenodo.15799921"
+        ],
+        "objectIdentifier": "doi_dedup___::0e717c9eda7d819cb6a28fd6aab48a27",
+        "publisher": "Zenodo",
+        "title": "Software Heritage: Building A Community To Safeguard The Software Commons"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Dandrimont, Nicolas",
+          "Software Heritage"
+        ],
+        "dateofacceptance": "2018-02-13",
+        "dois": [
+          "10.5281/zenodo.15807278",
+          "10.5281/zenodo.15807279"
+        ],
+        "objectIdentifier": "doi_dedup___::651150081aa42321e351750c769856b0",
+        "publisher": "Zenodo",
+        "title": "Software Heritage: Preserving the Free Software Commons"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Druskat, Stephan"
+        ],
+        "dateofacceptance": "2025-05-19",
+        "dois": [
+          "10.5281/zenodo.15470504",
+          "10.5281/zenodo.15470505"
+        ],
+        "objectIdentifier": "doi_dedup___::4123c96633d854ae6f4d4c7c60edf6c8",
+        "publisher": "Zenodo",
+        "title": "Intelligent processes for FAIR, resilient and sustainable research software"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Gruenpeter, Morane",
+          "Software Heritage"
+        ],
+        "dateofacceptance": "2022-04-21",
+        "dois": [
+          "10.5281/zenodo.15800049",
+          "10.5281/zenodo.15800050"
+        ],
+        "objectIdentifier": "doi_dedup___::3bce74aae6dd2f02c571eb8046be5396",
+        "publisher": "Zenodo",
+        "title": "Archive, Identify, Describe And Cite Software Source Code With HAL And With Software Heritage"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Dandrimont, Nicolas",
+          "Software Heritage"
+        ],
+        "dateofacceptance": "2017-09-27",
+        "dois": [
+          "10.5281/zenodo.15828001",
+          "10.5281/zenodo.15828002"
+        ],
+        "objectIdentifier": "doi_dedup___::01878ebfdaf3fa0542b24580ab1996b0",
+        "publisher": "Zenodo",
+        "title": "Software Heritage: Our Software Commons, Forever. Challenges In Storing The Biggest VCS Graph In History"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Benjamin, Ubokobong Effiong",
+          "Prof. B. O.",
+          "Prof.E.E. Ogheneovo"
+        ],
+        "dateofacceptance": "2025-05-19",
+        "dois": [
+          "10.5281/zenodo.15465408",
+          "10.5281/zenodo.15465409"
+        ],
+        "objectIdentifier": "doi_dedup___::44e9e3ac7318a261cd1c50167da0189b",
+        "publisher": "Zenodo",
+        "title": "CRITERIA RELATED TECHNIQUES FOR SOFTWARE EVALUATION"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Puli Nageswara Rao*1, D.Jyothirmai2 & Dr.K.Subba Rao3"
+        ],
+        "dateofacceptance": "2018-03-15",
+        "dois": [
+          "10.5281/zenodo.1199221",
+          "10.5281/zenodo.1199222"
+        ],
+        "objectIdentifier": "doi_dedup___::0b033958e56b165ac202e42b8b58cf5e",
+        "publisher": "Zenodo",
+        "title": "Improvement In The Software Reliability By Using The Software Reliability Characteristic Model And Measures Of Defect Control"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Software Heritage",
+          "Zacchiroli, Stefano"
+        ],
+        "dateofacceptance": "2018-01-25",
+        "dois": [
+          "10.5281/zenodo.15807252",
+          "10.5281/zenodo.15807253"
+        ],
+        "objectIdentifier": "doi_dedup___::40515ef53f3008ad45a9ee0b87ec9588",
+        "publisher": "Zenodo",
+        "title": "Software Heritage: Technical Challenges When Archiving The Entire Software Commons"
+      }
+    ],
+    "size": null,
+    "total": 42032
+  },
+  "params": {
+    "keywords": "software",
+    "openaireProviderID": "opendoar____::358aee4cc897452c00244351e4d91f69",
+    "page": "1",
+    "size": "10"
+  }
+}

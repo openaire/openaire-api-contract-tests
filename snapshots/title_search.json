@@ -1,0 +1,158 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Wei, Li"
+        ],
+        "dateofacceptance": "2023-10-01",
+        "dois": [
+          "10.1038/s41588-023-01543-3"
+        ],
+        "objectIdentifier": "doi_dedup___::b020c0e0ad29972a615292143a5ea56c",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Protein structural alignment using deep learning"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "David Baker",
+          "Minkyung Baek"
+        ],
+        "dateofacceptance": "2022-01-01",
+        "dois": [
+          "10.1038/s41592-021-01360-8"
+        ],
+        "objectIdentifier": "doi_dedup___::86a5d3030cbe44591e05bef030124503",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Deep learning and protein structure modeling"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Po-Ssu Huang",
+          "Sergey Ovchinnikov"
+        ],
+        "dateofacceptance": "2021-12-01",
+        "dois": [
+          "10.1016/j.cbpa.2021.08.004"
+        ],
+        "objectIdentifier": "doi_dedup___::22fd5e9813de77aab16cd16752f036fc",
+        "publisher": "Elsevier BV",
+        "title": "Structure-based protein design with deep learning"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Patrick, Bryant"
+        ],
+        "dateofacceptance": "2023-04-01",
+        "dois": [
+          "10.1016/j.sbi.2023.102529"
+        ],
+        "objectIdentifier": "doi_dedup___::f6526ca4b78f8af73eb9a51b5d9d88d5",
+        "publisher": "Elsevier BV",
+        "title": "Deep learning for protein complex structure prediction"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Le, Quan",
+          "Pollastri, Gianluca",
+          "Torrisi, Mirko"
+        ],
+        "dateofacceptance": "2020-01-01",
+        "dois": [
+          "10.1016/j.csbj.2019.12.011"
+        ],
+        "objectIdentifier": "doi_dedup___::54d78bf7d43abdec70d5ec1905a30604",
+        "publisher": "Elsevier BV",
+        "title": "Deep learning methods in protein structure prediction"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Jiaxiang Wu"
+        ],
+        "dateofacceptance": "2026-01-01",
+        "dois": [
+          "10.1016/b978-0-44-332908-1.00023-4"
+        ],
+        "objectIdentifier": "doi_________::8f2a9de78406693d1b1a246e6e43b490",
+        "publisher": "Elsevier BV",
+        "title": "Deep learning in protein structure prediction"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Jeffrey J. Gray",
+          "Jeremias Sulam",
+          "Sai Pooja Mahajan",
+          "Wenhao Gao"
+        ],
+        "dateofacceptance": "2020-12-01",
+        "dois": [
+          "10.1016/j.patter.2020.100142",
+          "10.48550/arxiv.2007.08383"
+        ],
+        "objectIdentifier": "doi_dedup___::10c599dfdd0d1f425eda2346b6eb0fe1",
+        "publisher": "Elsevier BV",
+        "title": "Deep Learning in Protein Structural Modeling and Design"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Adhikari, Badri",
+          "KC, Dukka B.",
+          "Pakhrin, Subash C.",
+          "Shrestha, Bikash"
+        ],
+        "dateofacceptance": "2021-05-24",
+        "dois": [
+          "10.3390/ijms22115553"
+        ],
+        "objectIdentifier": "doi_dedup___::e2d664c56ef54c17ab129b6a703c3229",
+        "publisher": "MDPI AG",
+        "title": "Deep Learning-Based Advances in Protein Structure Prediction"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "P. B. Jayaraj",
+          "V. A. Jisna"
+        ],
+        "dateofacceptance": "2021-05-28",
+        "dois": [
+          "10.1007/s10930-021-10003-y"
+        ],
+        "objectIdentifier": "doi_dedup___::74a18889c4e901790efb2c60964668d5",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Protein Structure Prediction: Conventional and Deep Learning Perspectives"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Yijun Liu",
+          "Yucong Liu",
+          "Zhenhai Li"
+        ],
+        "dateofacceptance": "2024-06-23",
+        "dois": [
+          "10.1002/prot.26721"
+        ],
+        "objectIdentifier": "doi_dedup___::ebb9de04e4a2fed64a614c64da2905ab",
+        "publisher": "Wiley",
+        "title": "Protein–Protein Interaction Prediction via Structure‐Based Deep Learning"
+      }
+    ],
+    "size": null,
+    "total": 456
+  },
+  "params": {
+    "page": "1",
+    "size": "10",
+    "title": "deep learning protein structure"
+  }
+}

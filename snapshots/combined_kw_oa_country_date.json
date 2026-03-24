@@ -1,0 +1,160 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Agrusti, Francesco",
+          "Bonavolontà, Gianmarco"
+        ],
+        "dateofacceptance": "2022-12-19",
+        "dois": [
+          "10.7358/ecps-2022-026-agbo"
+        ],
+        "objectIdentifier": "doi_________::0ca22d687f0f11bca287d1f1612cfc14",
+        "publisher": "Led Edizioni Universitarie",
+        "title": "Educational Robotics for Special Needs Students: Teachers’ Perspectives on Pre-service TrainingEducational Robotics for Special Needs Students: Teachers’ Perspectives on Pre-service Training"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Hirata Y.",
+          "Johnson M. J.",
+          "Mazzoleni S.",
+          "Taffoni F.",
+          "Zollo L."
+        ],
+        "dateofacceptance": "2021-09-01",
+        "dois": [
+          "10.1109/mra.2021.3096258"
+        ],
+        "objectIdentifier": "doi_dedup___::7c2cb422f247ac1f04ee3681677c419b",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "title": "2021 IEEE RAS Seasonal School on Rehabilitation and Assistive Robotics Based on Soft Robotics [Education]"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Datteri, E"
+        ],
+        "dateofacceptance": "2022-01-01",
+        "dois": [],
+        "objectIdentifier": "od______1299::9a12a396447a3f59655b25d16ba0fe46",
+        "publisher": "Scienzaefilosofia",
+        "title": "Robotics and Philosophy of Science"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Ivan Traina"
+        ],
+        "dateofacceptance": "2023-01-01",
+        "dois": [],
+        "objectIdentifier": "od______1943::6b9fb21dcb5ea0e91180d1fc9b8a654b",
+        "publisher": "",
+        "title": "Social Robotics for Students with Autism Spectrum Disorder in Upper Secondary School: A Case Study"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Giansanti, Daniele"
+        ],
+        "dateofacceptance": "2022-06-10",
+        "dois": [
+          "10.3390/healthcare10061080"
+        ],
+        "objectIdentifier": "doi_dedup___::fb59fb0a6784158cf86f0fdb901aaec8",
+        "publisher": "MDPI AG",
+        "title": "Assistive Technologies, Robotics, Automatic Machines: Perspectives of Integration in the Health Domain"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Baldassarra, Francesco",
+          "Borga, Giovanni",
+          "Romero, Maximiliano Ernesto",
+          "Vangal, Rohan Sashindran"
+        ],
+        "dateofacceptance": "2021-01-01",
+        "dois": [],
+        "objectIdentifier": "od______3661::6b64969d8a0e2aee56eeef2ad39b4c73",
+        "publisher": "Cumulus Association ; Aalto University ; Sapienza University of Rome",
+        "title": "Designers' Skills for Social Robotics"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Annamaria De Santis",
+          "Claudia Bellini",
+          "Katia Sannicandro",
+          "Tommaso Minerva"
+        ],
+        "dateofacceptance": "2022-11-02",
+        "dois": [
+          "10.3389/feduc.2022.955572"
+        ],
+        "objectIdentifier": "doi_dedup___::6b26352de4e17c8d2ce390e863147608",
+        "publisher": "Frontiers Media SA",
+        "title": "A scoping review on the relationship between robotics in educational contexts and e-health"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Francesco Cardinale"
+        ],
+        "dateofacceptance": "2021-05-20",
+        "dois": [
+          "10.1093/ons/opab162"
+        ],
+        "objectIdentifier": "doi_dedup___::a4f10a89d4b040bec35164a3ea8e9061",
+        "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+        "title": "Commentary: The Path to Surgical Robotics in Neurosurgery"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Brunilda Simaku",
+          "Emanuele Menegatti",
+          "Gloria Beraldo",
+          "Michele Moro",
+          "Monica Pivetti",
+          "Silvia Di Battista"
+        ],
+        "dateofacceptance": "2021-01-01",
+        "dois": [
+          "10.1007/978-3-030-77022-8_15"
+        ],
+        "objectIdentifier": "doi_dedup___::2b2ecd5aa48d3d2366ec9e8c9ba9226d",
+        "publisher": "Springer International Publishing",
+        "title": "Educational Robotics Acceptance by Italian Teachers, Educators, Psychologists and Psychotherapists"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Lorenzo Natale",
+          "Michele Colledanchise"
+        ],
+        "dateofacceptance": "2021-07-01",
+        "dois": [
+          "10.1109/lra.2021.3087442",
+          "10.48550/arxiv.2106.15227"
+        ],
+        "objectIdentifier": "doi_dedup___::5c4a544f116e4a808145a4050d6ec59c",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "title": "On the Implementation of Behavior Trees in Robotics"
+      }
+    ],
+    "size": null,
+    "total": 2172
+  },
+  "params": {
+    "OA": "true",
+    "country": "IT",
+    "fromDateAccepted": "2021-01-01",
+    "keywords": "robotics",
+    "page": "1",
+    "size": "10",
+    "toDateAccepted": "2023-12-31"
+  }
+}

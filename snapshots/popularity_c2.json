@@ -1,0 +1,200 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Jintong Tang",
+          "Robert A. Baron"
+        ],
+        "dateofacceptance": "2011-01-01",
+        "dois": [
+          "10.1016/j.jbusvent.2009.06.002"
+        ],
+        "objectIdentifier": "doi_dedup___::4f7a952adc76d485c027df63c87dd08c",
+        "publisher": "Elsevier BV",
+        "title": "The role of entrepreneurs in firm-level innovation: Joint effects of positive affect, creativity, and environmental dynamism"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "BICUDO DE ALMEIDA-MURADIAN, LIGIA",
+          "BOGDANOV, STEFAN",
+          "CAMPOS, MARÍA G.R.",
+          "FERREIRA, FRANCISCO",
+          "FRIGEIRO, CHRISTIAN",
+          "MANCEBO, YANINA",
+          "SZCZESNA, TERESA"
+        ],
+        "dateofacceptance": "2008-01-01",
+        "dois": [
+          "10.1080/00218839.2008.11101443"
+        ],
+        "objectIdentifier": "doi_dedup___::5a31455c73dd364e0cf6cd17c75e02e4",
+        "publisher": "Informa UK Limited",
+        "title": "Pollen composition and standardisation of analytical methods"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Alicia Hamar",
+          "Cinzia Piatti",
+          "Danilo Crispim Massuela",
+          "Forough Khajehei",
+          "Muhammad Waleed Khan",
+          "Pedro Miguel Silva",
+          "Simone Graeff-Hönninger",
+          "Viktória Angeli"
+        ],
+        "dateofacceptance": "2020-02-19",
+        "dois": [
+          "10.3390/foods9020216"
+        ],
+        "objectIdentifier": "doi_dedup___::2fc09a4a4a22019234ded161c7d23b91",
+        "publisher": "MDPI AG",
+        "title": "Quinoa (Chenopodium quinoa Willd.): An Overview of the Potentials of the “Golden Grain” and Socio-Economic and Environmental Aspects of Its Cultivation and Marketization"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Nielsen, M. A.",
+          "Schumacher, Benjamin"
+        ],
+        "dateofacceptance": "1996-10-01",
+        "dois": [
+          "10.1103/physreva.54.2629",
+          "10.48550/arxiv.quant-ph/9604022"
+        ],
+        "objectIdentifier": "doi_dedup___::2590d266a7f073235cb5c9cbc741b4ab",
+        "publisher": "American Physical Society (APS)",
+        "title": "Quantum data processing and error correction"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Chaudhuri, Ovijit",
+          "Lou, Junzhe",
+          "Nam, Sungmin",
+          "Stowers, Ryan",
+          "Xia, Yan"
+        ],
+        "dateofacceptance": "2019-04-01",
+        "dois": [
+          "10.1016/j.biomaterials.2019.02.004"
+        ],
+        "objectIdentifier": "doi_dedup___::fb8ee567da9bcbd426993969848cc7ab",
+        "publisher": "Elsevier BV",
+        "title": "Varying PEG density to control stress relaxation in alginate-PEG hydrogels for 3D cell culture studies"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "De Poortere, E. P.",
+          "Gokmen, T.",
+          "Gunawan, O.",
+          "Shayegan, M.",
+          "Shkolnikov, Y. P.",
+          "Vakili, K."
+        ],
+        "dateofacceptance": "2006-11-03",
+        "dois": [
+          "10.1103/physrevlett.97.186404",
+          "10.48550/arxiv.cond-mat/0605692"
+        ],
+        "objectIdentifier": "doi_dedup___::c5a2e336844370ea79c3ed30cde8f938",
+        "publisher": "American Physical Society (APS)",
+        "title": "Valley Susceptibility of an Interacting Two-Dimensional Electron System"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Catherine, Laska",
+          "Christina, Dothager",
+          "Dorothea J, Mostello",
+          "Jeffrey A, Gavard",
+          "Katherine M Scolari, Childress",
+          "Sara, Lebovitz"
+        ],
+        "dateofacceptance": "2018-05-03",
+        "dois": [
+          "10.1055/s-0038-1646952"
+        ],
+        "objectIdentifier": "doi_dedup___::f37171bcc4251bdfa6d0ce17c9a002ea",
+        "publisher": "Georg Thieme Verlag KG",
+        "title": "Metoclopramide and Diphenhydramine: A Randomized Controlled Trial of a Treatment for Headache in Pregnancy when Acetaminophen Alone Is Ineffective (MAD Headache Study)"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Jason Cong",
+          "Michael Niemier",
+          "Sharon Xiaobo Hu",
+          "Xiaowei Xu",
+          "Yiyu Shi",
+          "Yu Hu",
+          "Yukun Ding"
+        ],
+        "dateofacceptance": "2018-04-17",
+        "dois": [
+          "10.1038/s41928-018-0059-3"
+        ],
+        "objectIdentifier": "doi_dedup___::1f02aa0547c1a362bfc67d299b30b688",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Scaling for edge inference of deep neural networks"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Bower, R.",
+          "Crain, R.A.",
+          "Dalla Vecchia, C.",
+          "Fattahi, A.",
+          "Frenk, C.S.",
+          "Furlong, M.",
+          "Helly, J.C.",
+          "Jenkins, A.",
+          "Navarro, J.F.",
+          "Oman, K.A.",
+          "Sawala, T.",
+          "Schaller, M.",
+          "Schaye, J.",
+          "Theuns, T.",
+          "Trayford, J.W.",
+          "White, S.D.M."
+        ],
+        "dateofacceptance": "2016-02-05",
+        "dois": [
+          "10.1093/mnras/stw145",
+          "10.48550/arxiv.1511.01098"
+        ],
+        "objectIdentifier": "doi_dedup___::032f630277a4f3e53b783572319e6298",
+        "publisher": "Oxford University Press (OUP)",
+        "title": "The APOSTLE simulations: solutions to the Local Group's cosmic puzzles"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "J Z, Su",
+          "M, Han",
+          "S, Nie",
+          "X, Gao"
+        ],
+        "dateofacceptance": "2001-07-01",
+        "dois": [
+          "10.1038/90228"
+        ],
+        "objectIdentifier": "doi_dedup___::b44373e1020b4cbb103e28c386fe21a9",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Quantum-dot-tagged microbeads for multiplexed optical coding of biomolecules"
+      }
+    ],
+    "size": null,
+    "total": 297136
+  },
+  "params": {
+    "page": "1",
+    "popularity": "C2",
+    "size": "10"
+  }
+}

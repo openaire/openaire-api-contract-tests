@@ -1,0 +1,166 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Ali Cheshmehzangi",
+          "Bindi Bennett",
+          "Dean McDonnell",
+          "Jaffar Abbas",
+          "Sabina Šegalo",
+          "Xiaoshan Li",
+          "Yu-Tao Xiang",
+          "Zhaohui Su"
+        ],
+        "dateofacceptance": "2021-09-15",
+        "dois": [
+          "10.3390/vaccines9091024"
+        ],
+        "objectIdentifier": "doi_dedup___::fc46786d43e2aee5008a85f129b1c862",
+        "publisher": "MDPI AG",
+        "title": "COVID-19 Vaccine Donations—Vaccine Empathy or Vaccine Diplomacy? A Narrative Literature Review"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Marshall, Sarah"
+        ],
+        "dateofacceptance": "2020-04-05",
+        "dois": [],
+        "objectIdentifier": "od______1535::3ac01c0d4ff8bf01d20b1fb446d993a0",
+        "publisher": "University College Cork",
+        "title": "Exploring vaccine decision-making to identify and address barriers to vaccine uptake in Ireland"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "A, Lynam",
+          "C, Bergin",
+          "C, Sadlier",
+          "M, Quinlan",
+          "O, Sheils",
+          "S, Clarke",
+          "S, Delamere",
+          "S, O'Dea"
+        ],
+        "dateofacceptance": "2016-05-06",
+        "dois": [
+          "10.1080/21645515.2016.1151588"
+        ],
+        "objectIdentifier": "doi_dedup___::a48b5bf8fa56949e21f437c788a8bc3c",
+        "publisher": "Informa UK Limited",
+        "title": "HPV vaccine acceptability in HIV-infected and HIV negative men who have sex with men (MSM) in Ireland"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Anne C. Moore",
+          "Lyndsey E. Moore",
+          "Sonja Vucen"
+        ],
+        "dateofacceptance": "2023-12-01",
+        "dois": [
+          "10.1080/21645515.2023.2287279",
+          "10.6084/m9.figshare.24712063",
+          "10.6084/m9.figshare.24712063.v1"
+        ],
+        "objectIdentifier": "doi_dedup___::1b6a54c9bc65a035d7f00a93e3d7c161",
+        "publisher": "Informa UK Limited",
+        "title": "Lack of influence of social media on vaccine decision-making by university students in Ireland"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "SADLIER, CORINNA MARGARET"
+        ],
+        "dateofacceptance": "2017-01-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::1fbbf53aaafccbdd75d33d9bb1b0155c",
+        "publisher": "Trinity College Dublin. School of Medicine. Discipline of Clinical Medicine",
+        "title": "Vaccination as a means of disease prevention in HIV infected individuals; successes, challenges & opportunities"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "C, Woodman",
+          "P M, Harrington",
+          "W F, Shannon"
+        ],
+        "dateofacceptance": "2000-05-31",
+        "dois": [],
+        "objectIdentifier": "pmid________::31c58411f9b7f8ea974c1b06ffdb609d",
+        "publisher": "",
+        "title": "Vaccine, yes; injection, no: maternal responses to the introduction of Haemophilus influenzae type b (Hib) vaccine."
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Bart van den Borne",
+          "Hans Bosma",
+          "Majdi M. Sabahelzain",
+          "Mohamed Moukhyer"
+        ],
+        "dateofacceptance": "2022-01-28",
+        "dois": [
+          "10.3390/vaccines10020205",
+          "10.34961/9897"
+        ],
+        "objectIdentifier": "doi_dedup___::5acaac8a5f68e6d44ca237fdab0e91e2",
+        "publisher": "MDPI AG",
+        "title": "Vaccine Hesitancy among Parents and Its Association with the Uptake of Measles Vaccine in Urban Settings in Khartoum State, Sudan"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "C, O'Rorke",
+          "D, Bedford",
+          "F, Howell",
+          "W, Bourke"
+        ],
+        "dateofacceptance": "2004-02-12",
+        "dois": [],
+        "objectIdentifier": "pmid________::3efa49390fe4cf55ed1d8fce7be7144a",
+        "publisher": "",
+        "title": "Uptake of influenza vaccine by healthcare workers in an acute hospital in Ireland."
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "B, Hayes",
+          "R, Quigley"
+        ],
+        "dateofacceptance": "2006-12-18",
+        "dois": [],
+        "objectIdentifier": "pmid________::e66f57db702d1f539e22911e8508059c",
+        "publisher": "",
+        "title": "Determinants of influenza vaccination uptake among hospital healthcare workers."
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Anne C. Moore",
+          "Aoife Fleming",
+          "Laura J. Sahm",
+          "Sarah Marshall"
+        ],
+        "dateofacceptance": "2021-11-23",
+        "dois": [
+          "10.3390/pharmacy9040188"
+        ],
+        "objectIdentifier": "doi_dedup___::5b95bd3a9a74b9ae39fae2c5fb77b502",
+        "publisher": "MDPI AG",
+        "title": "Parent Attitudes about Childhood Vaccines: Point Prevalence Survey of Vaccine Hesitancy in an Irish Population"
+      }
+    ],
+    "size": null,
+    "total": 2037
+  },
+  "params": {
+    "keywords": "vaccine",
+    "page": "1",
+    "publiclyFunded": "true",
+    "size": "10"
+  }
+}

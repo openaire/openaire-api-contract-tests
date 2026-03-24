@@ -1,0 +1,268 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Fottner Johannes",
+          "Rief Jona",
+          "Rücker Andreas"
+        ],
+        "dateofacceptance": "2020-01-01",
+        "dois": [
+          "10.5937/fme2002307r"
+        ],
+        "objectIdentifier": "doi_dedup___::26365f765404c13c66cfe108e1d5153a",
+        "publisher": "Centre for Evaluation in Education and Science (CEON/CEES)",
+        "title": "An investigation of mean energy demand, performance and reference cycles for stacker cranes"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Donglai Ma",
+          "Qian Wang",
+          "Yajing Zhang",
+          "Yuguang Zheng",
+          "Zongsheng Yan"
+        ],
+        "dateofacceptance": "2021-10-12",
+        "dois": [
+          "10.3762/bjoc.17.169"
+        ],
+        "objectIdentifier": "doi_dedup___::02eaa8fb8002ac788e4a27f1e8901471",
+        "publisher": "Beilstein Institut",
+        "title": "Visible-light-mediated copper photocatalysis for organic syntheses"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "BARBERO, Nadia",
+          "BAROLO, CLAUDIA",
+          "PARK, JINHYUNG",
+          "VISCARDI, Guido"
+        ],
+        "dateofacceptance": "2013-03-27",
+        "dois": [
+          "10.2533/chimia.2013.129"
+        ],
+        "objectIdentifier": "doi_dedup___::017a4b96508caa983fa17fb876ae3ebe",
+        "publisher": "Swiss Chemical Society",
+        "title": "Near-infrared Sensitization in Dye-sensitized Solar Cells"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Chandrima Sen",
+          "Mariana Frank",
+          "Priyotosh Bandyopadhyay",
+          "Snehashis Parashar"
+        ],
+        "dateofacceptance": "2024-03-19",
+        "dois": [
+          "10.1007/jhep03(2024)109",
+          "10.48550/arxiv.2310.08883"
+        ],
+        "objectIdentifier": "doi_dedup___::c8a4a17855d285026d0a228b0f32105b",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Interplay of inert doublet and vector-like lepton triplet with displaced vertices at the LHC/FCC and MATHUSLA"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Agostini, M.",
+          "Altenmüller, K.",
+          "Appel, S.",
+          "Bellini, G.",
+          "Benziger, J.",
+          "Berton, N.",
+          "Bick, D.",
+          "Bonfini, G.",
+          "Bravo, D.",
+          "Caccianiga, B.",
+          "Calaprice, F.",
+          "Caminata, A.",
+          "Cavalcante, P.",
+          "Chepurnov, A.",
+          "Cribier, M.",
+          "Davini, S.",
+          "Derbin, A.",
+          "Di Noto, L.",
+          "Durero, M.",
+          "Empl, A.",
+          "Etenko, A.",
+          "Farinon, S.",
+          "Fischer, V.",
+          "Fomenko, K.",
+          "Franco, D.",
+          "Gabriele, F.",
+          "Gaffiot, J.",
+          "Galbiati, C.",
+          "Ghiano, C.",
+          "Giammarchi, M.",
+          "Goretti, A.",
+          "Gromov, M.",
+          "Göger-Neff, M.",
+          "Hagner, C.",
+          "Houdy, Th.",
+          "Hungerford, E.",
+          "Ianni, Aldo",
+          "Ianni, Andrea",
+          "Jonquères, N.",
+          "Kaiser, M.",
+          "Kobychev, V.",
+          "Korablev, D.",
+          "Korga, G.",
+          "Kryn, D.",
+          "Lachenmaier, T.",
+          "Lasserre, T.",
+          "Laubenstein, M.",
+          "Lehnert, B.",
+          "Link, J.",
+          "Litvinovich, E.",
+          "Lombardi, F.",
+          "Lombardi, P.",
+          "Ludhova, L.",
+          "Lukyanchenko, G.",
+          "Machulin, I.",
+          "Maneschg, W.",
+          "Marcocci, S.",
+          "Maricic, J.",
+          "Mention, G.",
+          "Meroni, E.",
+          "Meyer, M.",
+          "Miramonti, L.",
+          "Misiaszek, M.",
+          "Montuschi, M.",
+          "Muratova, V.",
+          "Musenich, R.",
+          "Neumair, B.",
+          "Oberauer, L.",
+          "Obolensky, M.",
+          "Ortica, F.",
+          "Pallavicini, M.",
+          "Papp, L.",
+          "Perasso, L.",
+          "Pocar, A.",
+          "Ranucci, G.",
+          "Razeto, A.",
+          "Re, A.",
+          "Romani, A.",
+          "Rossi, N.",
+          "Schönert, S.",
+          "Scola, L.",
+          "Simgen, H.",
+          "Skorokhvatov, M.",
+          "Smirnov, O.",
+          "Sotnikov, A.",
+          "Sukhotin, S.",
+          "Suvorov, Y.",
+          "Tartaglia, R.",
+          "Testera, G.",
+          "Veyssière, C.",
+          "Vivier, M.",
+          "Vogelaar, R.B.",
+          "Wang, H.",
+          "Winter, J.",
+          "Wojcik, M.",
+          "Wurm, M.",
+          "Zaimidoroga, O.",
+          "Zavatarelli, S.",
+          "Zuber, K.",
+          "Zuzel, G.",
+          "d'Angelo, D.",
+          "von Feilitzsch, F."
+        ],
+        "dateofacceptance": "2016-01-01",
+        "dois": [
+          "10.1051/epjconf/201612101002"
+        ],
+        "objectIdentifier": "doi_dedup___::73652ca71ab8bc723a9e5f84ccc3d300",
+        "publisher": "EDP Sciences",
+        "title": "Short distance neutrino oscillations with Borexino"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Corasaniti, Sandra",
+          "Reiff-Stephan, Jörg",
+          "van de Sand, Ron"
+        ],
+        "dateofacceptance": "2021-01-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::1a1a32afdee954376eefff49b27d0789",
+        "publisher": "TIB Open Publishing",
+        "title": "Positive-Unlabelled Learning based Novelty Detection for Industrial Chillers"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Lović, Jelena",
+          "Popović, Ksenija",
+          "Tripković, Amalija"
+        ],
+        "dateofacceptance": "2010-01-01",
+        "dois": [
+          "10.2298/jsc100519093t"
+        ],
+        "objectIdentifier": "doi_dedup___::727ce35afdf37f332fbbbc5d63a4cda1",
+        "publisher": "National Library of Serbia",
+        "title": "Comparative study of ethanol oxidation at Pt: Based nanoalloys and UPD modified Pt nanoparticles"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Hlaváč, Zdeněk",
+          "Zeman, Vladimír"
+        ],
+        "dateofacceptance": "2014-06-01",
+        "dois": [],
+        "objectIdentifier": "dedup_wf_002::fc1bd256fc6402b5d18052b3494ec201",
+        "publisher": "University of West Bohemia",
+        "title": "Seismic response of nuclear fuel assembly"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Kopp, J.",
+          "Lindner, M.",
+          "Merle, A.",
+          "Rolinec, M."
+        ],
+        "dateofacceptance": "2007-01-15",
+        "dois": [
+          "10.1088/1126-6708/2007/01/053",
+          "10.48550/arxiv.hep-ph/0606151"
+        ],
+        "objectIdentifier": "doi_dedup___::512fd80419c2ab16887993469e07999f",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Reactor neutrino experiments with a large liquid scintillator detector"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Badziak, Marcin",
+          "Olechowski, Marek",
+          "Szczerbiak, Paweł"
+        ],
+        "dateofacceptance": "2017-07-01",
+        "dois": [
+          "10.1007/jhep07(2017)050",
+          "10.48550/arxiv.1705.00227"
+        ],
+        "objectIdentifier": "doi_dedup___::7ea051aacade75a6b16037a929eeaed4",
+        "publisher": "Springer Science and Business Media LLC",
+        "title": "Spin-dependent constraints on blind spots for thermal singlino-higgsino dark matter with(out) light singlets"
+      }
+    ],
+    "size": null,
+    "total": 15027
+  },
+  "params": {
+    "diamondJournal": "true",
+    "green": "true",
+    "page": "1",
+    "sdg": "7",
+    "size": "10"
+  }
+}

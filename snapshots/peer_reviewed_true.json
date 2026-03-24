@@ -1,0 +1,156 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "OPEN",
+        "creators": [],
+        "dateofacceptance": "2000-10-20",
+        "dois": [
+          "10.1002/0471223875"
+        ],
+        "objectIdentifier": "doi_dedup___::2e8cf851b18080694881c049d4b2f2a9",
+        "publisher": "Wiley",
+        "title": "An Introduction to Molecular Medicine and Gene Therapy"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [],
+        "dateofacceptance": "2001-01-01",
+        "dois": [
+          "10.1007/978-1-4615-1667-5"
+        ],
+        "objectIdentifier": "doi_dedup___::b7e28f9c803cfde5c87d3331b196392b",
+        "publisher": "Springer US",
+        "title": "Gene Therapy for Acute and Acquired Diseases"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [],
+        "dateofacceptance": "2005-09-15",
+        "dois": [
+          "10.1142/s0219030305000133"
+        ],
+        "objectIdentifier": "doi_________::9015cd51d712be2d20cba29e3c46e557",
+        "publisher": "World Scientific Pub Co Pte Lt",
+        "title": "Special Features — Gene Therapy"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Alexander, M. Yvonne",
+          "Casey, Garrett",
+          "Collins, Sara A.",
+          "Guinn, Barbara-Ann",
+          "O'Brien, Tim",
+          "Tangney, Mark"
+        ],
+        "dateofacceptance": "2008-10-01",
+        "dois": [
+          "10.1089/hum.2008.085"
+        ],
+        "objectIdentifier": "doi_dedup___::3e4b4ed4f55a841cb43a14ae6b97a88b",
+        "publisher": "Mary Ann Liebert Inc",
+        "title": "Tripartite Meeting in Gene and Cell Therapy, 2008: Irish Society for Gene and Cell Therapy, British Society for Gene Therapy, and International Society for Cell and Gene Therapy of Cancer"
+      },
+      {
+        "bestaccessright": "RESTRICTED",
+        "creators": [
+          "Cosset F. -L.",
+          "Danos O.",
+          "Deglon N.",
+          "Dickson G.",
+          "Dilber M. S.",
+          "Galun E.",
+          "Gansbacher B.",
+          "Klatzmann D.",
+          "Mavilio F.",
+          "Taylor N.",
+          "Thielemans K."
+        ],
+        "dateofacceptance": "2003-01-01",
+        "dois": [
+          "10.1002/jgm.364"
+        ],
+        "objectIdentifier": "doi_dedup___::fb5751ec00408469d41aabed052d5393",
+        "publisher": "Wiley",
+        "title": "French gene therapy group reports on the adverse event in a clinical trial of gene therapy for X‐linked severe combined immune deficiency (X‐SCID)"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [],
+        "dateofacceptance": "1997-02-01",
+        "dois": [
+          "10.1111/j.1447-0756.1997.tb00796.x"
+        ],
+        "objectIdentifier": "doi_dedup___::58efc3e7cb627084c6741a14d73a126c",
+        "publisher": "Wiley",
+        "title": "STATEMENT ON HUMAN GENE THERAPY: International Symposium on Human Gene Therapy"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Mohamad Reza",
+          "Rauza Sukma",
+          "Siski Rahayu"
+        ],
+        "dateofacceptance": "2024-12-26",
+        "dois": [
+          "10.52403/ijrr.20241254"
+        ],
+        "objectIdentifier": "doi_________::249edf4911976149a41272b564b4e482",
+        "publisher": "Galore Knowledge Publication Pvt. Ltd.",
+        "title": "A Brief Review on Gene Therapy"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "Francisco J, Romeo",
+          "Kiyotake, Ishikawa",
+          "Spyros A, Marvopoulos"
+        ],
+        "dateofacceptance": "2022-01-01",
+        "dois": [
+          "10.1007/978-1-0716-2707-5_1"
+        ],
+        "objectIdentifier": "doi_dedup___::c925acb4bbf2de4738ede78627a00ab8",
+        "publisher": "Springer US",
+        "title": "Updates on Cardiac Gene Therapy Research and Methods: Overview of Cardiac Gene Therapy"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "Health Departments of the United Kingdom,"
+        ],
+        "dateofacceptance": "1998-01-01",
+        "dois": [
+          "10.1155/1998/624810"
+        ],
+        "objectIdentifier": "doi_dedup___::33841efb852ab612a9ff5fe4b649ce2e",
+        "publisher": "Wiley",
+        "title": "<i>Gene Therapy Advisory Committee:</i> Report on the Potential Use of Gene Therapy <i>In Utero</i>"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "Keren Jiang"
+        ],
+        "dateofacceptance": "2023-04-28",
+        "dois": [
+          "10.54254/2753-8818/4/20220649"
+        ],
+        "objectIdentifier": "doi_________::36d301bc1954abca20ab7148c03dba25",
+        "publisher": "EWA Publishing",
+        "title": "Technologies in Gene Therapy"
+      }
+    ],
+    "size": null,
+    "total": 244523
+  },
+  "params": {
+    "keywords": "gene therapy",
+    "page": "1",
+    "peerReviewed": "true",
+    "size": "10"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "normalised": {
+    "page": 1,
+    "results": [
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "2022-01-01",
+        "dois": [
+          "10.11648/j.ajp.20220802.25",
+          "10.20944/preprints202206.0060.v1",
+          "10.9734/bpi/nramms/v7/11063f"
+        ],
+        "objectIdentifier": "doi_dedup___::4c837e7a15f03713997b26c18ee1b86d",
+        "publisher": "B P International (a part of SCIENCEDOMAIN International)",
+        "title": "Influence of Birth Season Climate on Adult Total Serum IgE Levels"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1992-01-01",
+        "dois": [
+          "10.1108/eum0000000002417"
+        ],
+        "objectIdentifier": "doi_________::067460eb8ab88a557f4b8bed3be8bb1a",
+        "publisher": "Emerald",
+        "title": "CREATING EFFECTIVENESS"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1979-10-01",
+        "dois": [
+          "10.1016/0142-694x(79)90015-2"
+        ],
+        "objectIdentifier": "doi_dedup___::c01b8b748898a8062399b031ba7e6eef",
+        "publisher": "Elsevier BV",
+        "title": "Morality and architecture"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1991-04-01",
+        "dois": [
+          "10.1108/09526869110139811"
+        ],
+        "objectIdentifier": "doi_dedup___::2052e4486a8bb1e2f9325fa3728ed993",
+        "publisher": "Emerald",
+        "title": "Total Quality Development in Mid Staffordshire"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "2009-07-01",
+        "dois": [
+          "10.1080/19398440902908928"
+        ],
+        "objectIdentifier": "doi_dedup___::f15eb2a872395ed2f8b49207c29121e7",
+        "publisher": "Informa UK Limited",
+        "title": "Judging research quality: from certainty to contingency"
+      },
+      {
+        "bestaccessright": "OPEN",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1882-01-01",
+        "dois": [
+          "10.5962/bhl.title.24982"
+        ],
+        "objectIdentifier": "doi_________::59c8ebe624ad2d3630fbc49cbddbaa98",
+        "publisher": "Macmillan",
+        "title": "A dictionary of popular names of the plants which furnish the natural and acquired wants of man, in all matters of domestic and general economy. Their history, products, &amp; uses"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "2006-01-01",
+        "dois": [
+          "10.5040/9798216436652"
+        ],
+        "objectIdentifier": "doi_________::d2a6ab88ce3b6c2c5ded4ec07ca5e000",
+        "publisher": "Jason Aronson",
+        "title": "Co-occurring Substance Abuse and Mental Disorders"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1987-10-01",
+        "dois": [
+          "10.1111/j.1758-6631.1987.tb01554.x"
+        ],
+        "objectIdentifier": "doi_dedup___::21411856f7e6580ef24c5ab137cdb2d8",
+        "publisher": "Wiley",
+        "title": "CWM: RE‐WRITING THE DRAMA OF MISSION"
+      },
+      {
+        "bestaccessright": "UNKNOWN",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1915-03-01",
+        "dois": [
+          "10.1080/00222931508693642"
+        ],
+        "objectIdentifier": "doi_dedup___::ca808365d5702e66969615ce613ed0b0",
+        "publisher": "Informa UK Limited",
+        "title": "XXV.—<i>Upper Silurian Foraminifera of Gothland</i>"
+      },
+      {
+        "bestaccessright": "CLOSED",
+        "creators": [
+          "John Smith"
+        ],
+        "dateofacceptance": "1911-01-01",
+        "dois": [
+          "10.1144/transglas.14.2.119"
+        ],
+        "objectIdentifier": "doi_dedup___::cbca27412db0c76355abc6dd3ec75a7a",
+        "publisher": "Geological Society of London",
+        "title": "VII. Carboniferous Limestone Rocks of the Isle of Man"
+      }
+    ],
+    "size": null,
+    "total": 1224
+  },
+  "params": {
+    "author": "John Smith",
+    "page": "1",
+    "size": "10"
+  }
+}
