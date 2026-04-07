@@ -4,3 +4,10 @@ __pycache__/
 .pytest_cache/
 *.swp
 *.swo
+snapshots/*
+snapshots_datasets/*
+snapshots_other/*
+snapshots_projects/*
+snapshots_publications/*
+snapshots_software/*
+

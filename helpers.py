@@ -1,6 +1,9 @@
 """
 Shared helpers for querying the OpenAIRE Search API, normalising responses,
 and persisting / loading snapshots.
+
+Supports research-product endpoints (publications, datasets, software, other)
+as well as the project-specific endpoint with its distinct metadata schema.
 """
 
 import hashlib
@@ -18,6 +21,11 @@ from lxml import etree
 REQUEST_TIMEOUT = int(os.environ.get("OPENAIRE_REQUEST_TIMEOUT", "60"))
 RETRY_COUNT = int(os.environ.get("OPENAIRE_RETRY_COUNT", "3"))
 RETRY_DELAY = int(os.environ.get("OPENAIRE_RETRY_DELAY", "5"))
+
+# Default tolerance (%) for total-count comparison in multi-result queries.
+# The indexes behind different API instances may differ slightly, so we allow
+# a small deviation by default.
+DEFAULT_TOTAL_TOLERANCE_PCT = 10.0
 
 # Metadata fields we consider relevant for contract comparison.
 # Anything not listed here is ignored during diff so that volatile fields
@@ -285,6 +293,169 @@ def normalise_xml_response(xml_text: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Project-specific normalisation
+# ---------------------------------------------------------------------------
+
+def normalise_project_json_response(body: dict) -> dict:
+    """
+    Distil a JSON API response from the projects endpoint down to the
+    contract-relevant fields.
+
+    Projects have a different metadata schema (``oaf:project`` instead of
+    ``oaf:result``) with fields like code (grant ID), acronym, title,
+    start/end dates, funder, etc.
+    """
+    response = body.get("response", body)
+    header = response.get("header", {})
+    total = (
+        int(header.get("total", {}).get("$", 0))
+        if isinstance(header.get("total"), dict)
+        else int(header.get("total", 0))
+    )
+    page_info = header.get("page", {})
+    if isinstance(page_info, dict):
+        page_num = page_info.get("$", None)
+        page_size = page_info.get("@size", None)
+    else:
+        page_num = None
+        page_size = None
+
+    results_wrapper = response.get("results") or {}
+    raw_results = results_wrapper.get("result") or []
+    if isinstance(raw_results, dict):
+        raw_results = [raw_results]
+
+    normalised = []
+    for r in raw_results:
+        metadata = r.get("metadata", {})
+        entity = metadata.get("oaf:entity", metadata)
+        project = entity.get("oaf:project", entity)
+
+        # objectIdentifier
+        obj_id = r.get("header", {}).get("dri:objIdentifier", {})
+        if isinstance(obj_id, dict):
+            obj_id = obj_id.get("$", "")
+
+        # code (grant ID)
+        code = project.get("code", "")
+        if isinstance(code, dict):
+            code = code.get("$", "")
+
+        # title
+        title_raw = project.get("title", "")
+        if isinstance(title_raw, dict):
+            title = title_raw.get("$", str(title_raw))
+        else:
+            title = str(title_raw)
+
+        # acronym
+        acronym = project.get("acronym", "")
+        if isinstance(acronym, dict):
+            acronym = acronym.get("$", "")
+
+        # startdate / enddate
+        startdate = project.get("startdate", "")
+        if isinstance(startdate, dict):
+            startdate = startdate.get("$", "")
+        enddate = project.get("enddate", "")
+        if isinstance(enddate, dict):
+            enddate = enddate.get("$", "")
+
+        # fundingtree → funder name
+        funder_name = ""
+        ft = project.get("fundingtree", {})
+        if isinstance(ft, list):
+            ft = ft[0] if ft else {}
+        if isinstance(ft, dict):
+            funder = ft.get("funder", {})
+            if isinstance(funder, dict):
+                fn = funder.get("name", "")
+                funder_name = fn.get("$", str(fn)) if isinstance(fn, dict) else str(fn)
+
+        normalised.append({
+            "objectIdentifier": obj_id,
+            "code": code,
+            "title": title,
+            "acronym": acronym,
+            "startdate": startdate,
+            "enddate": enddate,
+            "funder": funder_name,
+        })
+
+    return {
+        "total": total,
+        "page": page_num,
+        "size": page_size,
+        "results": normalised,
+    }
+
+
+def normalise_project_xml_response(xml_text: str) -> dict:
+    """
+    Parse an XML response from the projects endpoint and extract contract-
+    relevant project fields.
+    """
+    root = etree.fromstring(
+        xml_text.encode("utf-8") if isinstance(xml_text, str) else xml_text
+    )
+
+    header = root.find(".//header")
+    total_el = header.find("total") if header is not None else None
+    total = int(total_el.text) if total_el is not None and total_el.text else 0
+
+    page_el = header.find("page") if header is not None else None
+    page_num = page_el.text if page_el is not None and page_el.text else None
+    page_size = page_el.get("size") if page_el is not None else None
+
+    results = []
+    for res in root.findall(".//result"):
+        obj_id_el = res.find(
+            ".//dri:objIdentifier",
+            namespaces={"dri": "http://www.driver-repository.eu/namespace/dri"},
+        )
+        if obj_id_el is None:
+            obj_id_el = res.find("./header/objIdentifier")
+        obj_id = obj_id_el.text.strip() if obj_id_el is not None and obj_id_el.text else ""
+
+        oaf_project = res.find(".//{http://namespace.openaire.eu/oaf}project")
+        if oaf_project is None:
+            oaf_project = res
+
+        def _txt(parent, tag):
+            el = parent.find(tag)
+            return el.text.strip() if el is not None and el.text else ""
+
+        code = _txt(oaf_project, "code")
+        title = _txt(oaf_project, "title")
+        acronym = _txt(oaf_project, "acronym")
+        startdate = _txt(oaf_project, "startdate")
+        enddate = _txt(oaf_project, "enddate")
+
+        funder_el = oaf_project.find(".//funder")
+        funder_name = ""
+        if funder_el is not None:
+            name_el = funder_el.find("name")
+            funder_name = name_el.text.strip() if name_el is not None and name_el.text else ""
+
+        results.append({
+            "objectIdentifier": obj_id,
+            "code": code,
+            "title": title,
+            "acronym": acronym,
+            "startdate": startdate,
+            "enddate": enddate,
+            "funder": funder_name,
+        })
+
+    return {
+        "total": total,
+        "page": page_num,
+        "size": page_size,
+        "results": results,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Snapshot persistence
 # ---------------------------------------------------------------------------
 
@@ -321,6 +492,7 @@ def compare_snapshots(
     current: dict,
     *,
     total_tolerance_pct: float = 0.0,
+    loose: bool = False,
 ) -> List[str]:
     """
     Compare two normalised response dicts.
@@ -331,6 +503,14 @@ def compare_snapshots(
     ``total_tolerance_pct`` allows the total result count to differ by up to
     this percentage (useful for huge result sets where minor index changes
     are acceptable).  Set to 0.0 for exact match.
+
+    ``loose``  – when True the comparison is relaxed:
+      * The number of results on the page may differ.
+      * Result ordering is not checked.
+      * Instead of a positional field-by-field diff we check that the *set* of
+        object identifiers from the baseline overlaps with the current result
+        set by at least 50 %.  This accounts for minor index churn across
+        different backend instances while still catching wholesale breakage.
     """
     diffs: List[str] = []
 
@@ -344,40 +524,71 @@ def compare_snapshots(
     b_results = baseline["results"]
     c_results = current["results"]
 
-    if len(b_results) != len(c_results):
-        diffs.append(
-            f"Number of results on page differs: baseline={len(b_results)}, "
-            f"current={len(c_results)}"
-        )
-
-    for idx, (br, cr) in enumerate(zip(b_results, c_results)):
-        for key in ("objectIdentifier", "title", "dateofacceptance", "bestaccessright", "publisher"):
-            bv = br.get(key, "")
-            cv = cr.get(key, "")
-            if bv != cv:
-                diffs.append(
-                    f"Result[{idx}].{key} differs: "
-                    f"baseline={bv!r}, current={cv!r}"
-                )
-
-        if br.get("creators") != cr.get("creators"):
+    if loose:
+        # --- Loose comparison mode ---
+        # We only verify that a reasonable proportion of baseline IDs are
+        # still present and that result count hasn't changed wildly.
+        if len(b_results) > 0 and len(c_results) == 0:
             diffs.append(
-                f"Result[{idx}].creators differs: "
-                f"baseline={br.get('creators')}, current={cr.get('creators')}"
+                "Current response returned 0 results on page but baseline "
+                f"had {len(b_results)}."
+            )
+        elif len(b_results) > 0:
+            b_ids = {r.get("objectIdentifier", "") for r in b_results} - {""}
+            c_ids = {r.get("objectIdentifier", "") for r in c_results} - {""}
+            if b_ids:
+                overlap = b_ids & c_ids
+                overlap_pct = len(overlap) / len(b_ids) * 100
+                if overlap_pct < 50:
+                    diffs.append(
+                        f"Result-set overlap too low: only {overlap_pct:.0f}% of "
+                        f"baseline IDs found in current results "
+                        f"(baseline={len(b_ids)}, overlap={len(overlap)})."
+                    )
+    else:
+        # --- Strict comparison mode ---
+        if len(b_results) != len(c_results):
+            diffs.append(
+                f"Number of results on page differs: baseline={len(b_results)}, "
+                f"current={len(c_results)}"
             )
 
-        if br.get("dois") != cr.get("dois"):
-            diffs.append(
-                f"Result[{idx}].dois differs: "
-                f"baseline={br.get('dois')}, current={cr.get('dois')}"
-            )
+        # Determine which fields to compare based on result structure
+        # (projects have different keys than research products).
+        sample = b_results[0] if b_results else {}
+        if "code" in sample:
+            # Project results
+            scalar_keys = ("objectIdentifier", "code", "title", "acronym",
+                           "startdate", "enddate", "funder")
+            list_keys: tuple = ()
+        else:
+            # Research product results
+            scalar_keys = ("objectIdentifier", "title", "dateofacceptance",
+                           "bestaccessright", "publisher")
+            list_keys = ("creators", "dois")
 
-    # Check ordering by objectIdentifier
-    b_ids = [r["objectIdentifier"] for r in b_results]
-    c_ids = [r["objectIdentifier"] for r in c_results[:len(b_ids)]]
-    if b_ids != c_ids:
-        diffs.append(
-            "Result ordering (by objectIdentifier) differs between baseline and current."
-        )
+        for idx, (br, cr) in enumerate(zip(b_results, c_results)):
+            for key in scalar_keys:
+                bv = br.get(key, "")
+                cv = cr.get(key, "")
+                if bv != cv:
+                    diffs.append(
+                        f"Result[{idx}].{key} differs: "
+                        f"baseline={bv!r}, current={cv!r}"
+                    )
+            for key in list_keys:
+                if br.get(key) != cr.get(key):
+                    diffs.append(
+                        f"Result[{idx}].{key} differs: "
+                        f"baseline={br.get(key)}, current={cr.get(key)}"
+                    )
+
+        # Check ordering by objectIdentifier
+        b_ids = [r["objectIdentifier"] for r in b_results]
+        c_ids = [r["objectIdentifier"] for r in c_results[:len(b_ids)]]
+        if b_ids != c_ids:
+            diffs.append(
+                "Result ordering (by objectIdentifier) differs between baseline and current."
+            )
 
     return diffs
