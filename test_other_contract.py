@@ -30,8 +30,6 @@ from helpers import (
     compare_snapshots,
 )
 
-ENDPOINT = "search/other"
-
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -40,6 +38,7 @@ def _run_test(
     test_id: str,
     params: dict,
     base_url: str,
+    endpoint: str,
     snapshot_dir: str,
     phase: str,
     *,
@@ -48,7 +47,7 @@ def _run_test(
     loose: bool = True,
 ):
     """Core test driver – loose comparison by default."""
-    status, body = query_api(base_url, ENDPOINT, params, fmt=fmt)
+    status, body = query_api(base_url, endpoint, params, fmt=fmt)
     assert status == 200, f"Expected HTTP 200, got {status}"
 
     if fmt == "json":
@@ -78,18 +77,18 @@ def _run_test(
 class TestKeywordSearch:
     """Search other research products by keywords."""
 
-    def test_single_keyword(self, base_url, snapshot_dir_other, phase):
+    def test_single_keyword(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "keyword_single",
             {"keywords": "report", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_multiple_keywords(self, base_url, snapshot_dir_other, phase):
+    def test_multiple_keywords(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "keyword_multiple",
             {"keywords": "policy brief education", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -100,11 +99,11 @@ class TestKeywordSearch:
 class TestDOILookup:
     """Retrieve other research products by DOI."""
 
-    def test_single_doi(self, base_url, snapshot_dir_other, phase):
+    def test_single_doi(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "doi_single",
             {"doi": "10.5281/zenodo.5678", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
             loose=False,
         )
 
@@ -116,11 +115,11 @@ class TestDOILookup:
 class TestTitleSearch:
     """Search other research products by title."""
 
-    def test_title(self, base_url, snapshot_dir_other, phase):
+    def test_title(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "title_search",
             {"title": "technical report analysis", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -131,11 +130,11 @@ class TestTitleSearch:
 class TestAuthorSearch:
     """Search other research products by author."""
 
-    def test_author(self, base_url, snapshot_dir_other, phase):
+    def test_author(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "author_search",
             {"author": "Mueller", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -146,11 +145,11 @@ class TestAuthorSearch:
 class TestORCIDSearch:
     """Search other research products by ORCID."""
 
-    def test_orcid(self, base_url, snapshot_dir_other, phase):
+    def test_orcid(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "orcid",
             {"orcid": "0000-0002-9079-593X", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -161,7 +160,7 @@ class TestORCIDSearch:
 class TestDateRange:
     """Filter other research products by date range."""
 
-    def test_from_date(self, base_url, snapshot_dir_other, phase):
+    def test_from_date(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "date_from",
             {
@@ -170,10 +169,10 @@ class TestDateRange:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_date_range(self, base_url, snapshot_dir_other, phase):
+    def test_date_range(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "date_range",
             {
@@ -183,7 +182,7 @@ class TestDateRange:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -194,18 +193,18 @@ class TestDateRange:
 class TestOpenAccess:
     """Filter other research products by Open Access status."""
 
-    def test_open_access_true(self, base_url, snapshot_dir_other, phase):
+    def test_open_access_true(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "oa_true",
             {"keywords": "evaluation", "OA": "true", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_open_access_false(self, base_url, snapshot_dir_other, phase):
+    def test_open_access_false(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "oa_false",
             {"keywords": "evaluation", "OA": "false", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -216,25 +215,25 @@ class TestOpenAccess:
 class TestFunderFiltering:
     """Filter other research products by funder."""
 
-    def test_funder_ec(self, base_url, snapshot_dir_other, phase):
+    def test_funder_ec(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "funder_ec",
             {"funder": "EC", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_funder_nsf(self, base_url, snapshot_dir_other, phase):
+    def test_funder_nsf(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "funder_nsf",
             {"funder": "NSF", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_has_ec_funding_true(self, base_url, snapshot_dir_other, phase):
+    def test_has_ec_funding_true(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "has_ec_funding_true",
             {"hasECFunding": "true", "keywords": "project output", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -245,18 +244,18 @@ class TestFunderFiltering:
 class TestCountryFiltering:
     """Filter other research products by country."""
 
-    def test_country_de(self, base_url, snapshot_dir_other, phase):
+    def test_country_de(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "country_de",
             {"country": "DE", "keywords": "documentation", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_country_gb(self, base_url, snapshot_dir_other, phase):
+    def test_country_gb(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "country_gb",
             {"country": "GB", "keywords": "survey", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -267,7 +266,7 @@ class TestCountryFiltering:
 class TestSorting:
     """Verify sorted result ordering is preserved."""
 
-    def test_sort_by_date_descending(self, base_url, snapshot_dir_other, phase):
+    def test_sort_by_date_descending(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "sort_date_desc",
             {
@@ -276,10 +275,10 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_sort_by_date_ascending(self, base_url, snapshot_dir_other, phase):
+    def test_sort_by_date_ascending(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "sort_date_asc",
             {
@@ -288,7 +287,7 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -299,25 +298,25 @@ class TestSorting:
 class TestPagination:
     """Ensure pagination returns consistent slices."""
 
-    def test_page_1(self, base_url, snapshot_dir_other, phase):
+    def test_page_1(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "pagination_p1",
             {"keywords": "lecture", "size": "5", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_page_2(self, base_url, snapshot_dir_other, phase):
+    def test_page_2(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "pagination_p2",
             {"keywords": "lecture", "size": "5", "page": "2"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_large_page_size(self, base_url, snapshot_dir_other, phase):
+    def test_large_page_size(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "pagination_large",
             {"keywords": "lecture", "size": "50", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -328,32 +327,32 @@ class TestPagination:
 class TestImpactIndicators:
     """Filter other research products by bibliometric indicators."""
 
-    def test_influence_c1(self, base_url, snapshot_dir_other, phase):
+    def test_influence_c1(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "influence_c1",
             {"influence": "C1", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_popularity_c2(self, base_url, snapshot_dir_other, phase):
+    def test_popularity_c2(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "popularity_c2",
             {"popularity": "C2", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_citation_count_c3(self, base_url, snapshot_dir_other, phase):
+    def test_citation_count_c3(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "citation_count_c3",
             {"citationCount": "C3", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_impulse_c1(self, base_url, snapshot_dir_other, phase):
+    def test_impulse_c1(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "impulse_c1",
             {"impulse": "C1", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -364,11 +363,11 @@ class TestImpactIndicators:
 class TestProjectLinked:
     """Search for other research products linked to projects."""
 
-    def test_has_project_true(self, base_url, snapshot_dir_other, phase):
+    def test_has_project_true(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "has_project_true",
             {"hasProject": "true", "keywords": "deliverable", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -379,7 +378,7 @@ class TestProjectLinked:
 class TestProviderFiltering:
     """Filter by data provider."""
 
-    def test_provider_zenodo(self, base_url, snapshot_dir_other, phase):
+    def test_provider_zenodo(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "provider_zenodo",
             {
@@ -388,7 +387,7 @@ class TestProviderFiltering:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
 
@@ -399,11 +398,11 @@ class TestProviderFiltering:
 class TestXMLFormat:
     """Verify that XML responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, snapshot_dir_other, phase):
+    def test_xml_keyword_search(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "xml_keyword",
             {"keywords": "workshop", "size": "10", "page": "1"},
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
             fmt="xml",
         )
 
@@ -415,7 +414,7 @@ class TestXMLFormat:
 class TestCombinedFilters:
     """Test queries that combine multiple filter parameters."""
 
-    def test_keyword_oa_country_date(self, base_url, snapshot_dir_other, phase):
+    def test_keyword_oa_country_date(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "combined_kw_oa_country_date",
             {
@@ -427,10 +426,10 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )
 
-    def test_funder_sorted(self, base_url, snapshot_dir_other, phase):
+    def test_funder_sorted(self, base_url, endpoint_other, snapshot_dir_other, phase):
         _run_test(
             "combined_funder_sorted",
             {
@@ -440,5 +439,5 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_other, phase,
+            base_url, endpoint_other, snapshot_dir_other, phase,
         )

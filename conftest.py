@@ -46,7 +46,38 @@ def pytest_addoption(parser):
         "--endpoint",
         action="store",
         default=None,
-        help="Override the endpoint path (default: env OPENAIRE_ENDPOINT or 'search/publications').",
+        help="Override the publications endpoint path (default: env OPENAIRE_ENDPOINT or 'search/publications'). "
+             "For other endpoint types use --endpoint-datasets, --endpoint-software, etc.",
+    )
+    parser.addoption(
+        "--endpoint-publications",
+        action="store",
+        default=None,
+        help="Override the publications endpoint path (default: 'search/publications').",
+    )
+    parser.addoption(
+        "--endpoint-datasets",
+        action="store",
+        default=None,
+        help="Override the datasets endpoint path (default: 'search/datasets').",
+    )
+    parser.addoption(
+        "--endpoint-software",
+        action="store",
+        default=None,
+        help="Override the software endpoint path (default: 'search/software').",
+    )
+    parser.addoption(
+        "--endpoint-other",
+        action="store",
+        default=None,
+        help="Override the other research products endpoint path (default: 'search/other').",
+    )
+    parser.addoption(
+        "--endpoint-projects",
+        action="store",
+        default=None,
+        help="Override the projects endpoint path (default: 'search/projects').",
     )
 
 
@@ -122,8 +153,58 @@ def base_url(request):
 
 @pytest.fixture(scope="session")
 def endpoint(request):
+    """Publications endpoint path (legacy fixture, kept for backward compat)."""
     return (
-        request.config.getoption("--endpoint")
+        request.config.getoption("--endpoint-publications")
+        or request.config.getoption("--endpoint")
+        or os.environ.get("OPENAIRE_ENDPOINT_PUBLICATIONS")
         or os.environ.get("OPENAIRE_ENDPOINT")
         or "search/publications"
+    )
+
+
+@pytest.fixture(scope="session")
+def endpoint_publications(request):
+    return (
+        request.config.getoption("--endpoint-publications")
+        or request.config.getoption("--endpoint")
+        or os.environ.get("OPENAIRE_ENDPOINT_PUBLICATIONS")
+        or os.environ.get("OPENAIRE_ENDPOINT")
+        or "search/publications"
+    )
+
+
+@pytest.fixture(scope="session")
+def endpoint_datasets(request):
+    return (
+        request.config.getoption("--endpoint-datasets")
+        or os.environ.get("OPENAIRE_ENDPOINT_DATASETS")
+        or "search/datasets"
+    )
+
+
+@pytest.fixture(scope="session")
+def endpoint_software(request):
+    return (
+        request.config.getoption("--endpoint-software")
+        or os.environ.get("OPENAIRE_ENDPOINT_SOFTWARE")
+        or "search/software"
+    )
+
+
+@pytest.fixture(scope="session")
+def endpoint_other(request):
+    return (
+        request.config.getoption("--endpoint-other")
+        or os.environ.get("OPENAIRE_ENDPOINT_OTHER")
+        or "search/other"
+    )
+
+
+@pytest.fixture(scope="session")
+def endpoint_projects(request):
+    return (
+        request.config.getoption("--endpoint-projects")
+        or os.environ.get("OPENAIRE_ENDPOINT_PROJECTS")
+        or "search/projects"
     )

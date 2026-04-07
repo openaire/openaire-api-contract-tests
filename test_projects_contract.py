@@ -35,8 +35,6 @@ from helpers import (
     compare_snapshots,
 )
 
-ENDPOINT = "search/projects"
-
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -45,6 +43,7 @@ def _run_test(
     test_id: str,
     params: dict,
     base_url: str,
+    endpoint: str,
     snapshot_dir: str,
     phase: str,
     *,
@@ -57,7 +56,7 @@ def _run_test(
 
     Uses project-specific normalisers and loose comparison by default.
     """
-    status, body = query_api(base_url, ENDPOINT, params, fmt=fmt)
+    status, body = query_api(base_url, endpoint, params, fmt=fmt)
     assert status == 200, f"Expected HTTP 200, got {status}"
 
     if fmt == "json":
@@ -87,18 +86,18 @@ def _run_test(
 class TestKeywordSearch:
     """Search projects by keywords."""
 
-    def test_single_keyword(self, base_url, snapshot_dir_projects, phase):
+    def test_single_keyword(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "keyword_single",
             {"keywords": "health", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_multiple_keywords(self, base_url, snapshot_dir_projects, phase):
+    def test_multiple_keywords(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "keyword_multiple",
             {"keywords": "renewable energy transition", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -109,11 +108,11 @@ class TestKeywordSearch:
 class TestGrantIDLookup:
     """Retrieve projects by grant ID."""
 
-    def test_grant_id(self, base_url, snapshot_dir_projects, phase):
+    def test_grant_id(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "grant_id",
             {"grantID": "283595", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
             loose=False,
         )
 
@@ -125,11 +124,11 @@ class TestGrantIDLookup:
 class TestNameSearch:
     """Search projects by name."""
 
-    def test_name(self, base_url, snapshot_dir_projects, phase):
+    def test_name(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "name_search",
             {"name": "Open Science", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -140,11 +139,11 @@ class TestNameSearch:
 class TestAcronymSearch:
     """Search project by acronym."""
 
-    def test_acronym(self, base_url, snapshot_dir_projects, phase):
+    def test_acronym(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "acronym_search",
             {"acronym": "OpenAIRE", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
             loose=False,
         )
 
@@ -156,39 +155,39 @@ class TestAcronymSearch:
 class TestFunderFiltering:
     """Filter projects by funder."""
 
-    def test_funder_ec(self, base_url, snapshot_dir_projects, phase):
+    def test_funder_ec(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "funder_ec",
             {"funder": "EC", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_funder_nsf(self, base_url, snapshot_dir_projects, phase):
+    def test_funder_nsf(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "funder_nsf",
             {"funder": "NSF", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_funder_wt(self, base_url, snapshot_dir_projects, phase):
+    def test_funder_wt(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "funder_wt",
             {"funder": "WT", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_has_ec_funding_true(self, base_url, snapshot_dir_projects, phase):
+    def test_has_ec_funding_true(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "has_ec_funding_true",
             {"hasECFunding": "true", "keywords": "innovation", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_has_wt_funding_true(self, base_url, snapshot_dir_projects, phase):
+    def test_has_wt_funding_true(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "has_wt_funding_true",
             {"hasWTFunding": "true", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -199,11 +198,11 @@ class TestFunderFiltering:
 class TestCallID:
     """Filter projects by call identifier."""
 
-    def test_call_id(self, base_url, snapshot_dir_projects, phase):
+    def test_call_id(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "call_id",
             {"callID": "H2020-MSCA-IF-2014", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -214,18 +213,18 @@ class TestCallID:
 class TestYearFiltering:
     """Filter projects by start or end year."""
 
-    def test_start_year(self, base_url, snapshot_dir_projects, phase):
+    def test_start_year(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "start_year_2020",
             {"startYear": "2020", "funder": "EC", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_end_year(self, base_url, snapshot_dir_projects, phase):
+    def test_end_year(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "end_year_2023",
             {"endYear": "2023", "funder": "EC", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -236,18 +235,18 @@ class TestYearFiltering:
 class TestParticipantCountries:
     """Filter projects by participant countries."""
 
-    def test_participant_country_de(self, base_url, snapshot_dir_projects, phase):
+    def test_participant_country_de(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "participant_country_de",
             {"participantCountries": "DE", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_participant_country_fr(self, base_url, snapshot_dir_projects, phase):
+    def test_participant_country_fr(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "participant_country_fr",
             {"participantCountries": "FR", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -258,11 +257,11 @@ class TestParticipantCountries:
 class TestParticipantAcronyms:
     """Filter projects by participant institution acronyms."""
 
-    def test_participant_acronym(self, base_url, snapshot_dir_projects, phase):
+    def test_participant_acronym(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "participant_acronym_cern",
             {"participantAcronyms": "CERN", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -273,7 +272,7 @@ class TestParticipantAcronyms:
 class TestSorting:
     """Verify sorted result ordering is preserved for projects."""
 
-    def test_sort_by_start_date_desc(self, base_url, snapshot_dir_projects, phase):
+    def test_sort_by_start_date_desc(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "sort_startdate_desc",
             {
@@ -282,10 +281,10 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_sort_by_start_date_asc(self, base_url, snapshot_dir_projects, phase):
+    def test_sort_by_start_date_asc(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "sort_startdate_asc",
             {
@@ -294,10 +293,10 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_sort_by_end_date_desc(self, base_url, snapshot_dir_projects, phase):
+    def test_sort_by_end_date_desc(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "sort_enddate_desc",
             {
@@ -306,7 +305,7 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -317,25 +316,25 @@ class TestSorting:
 class TestPagination:
     """Ensure pagination returns consistent slices."""
 
-    def test_page_1(self, base_url, snapshot_dir_projects, phase):
+    def test_page_1(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "pagination_p1",
             {"keywords": "digital", "funder": "EC", "size": "5", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_page_2(self, base_url, snapshot_dir_projects, phase):
+    def test_page_2(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "pagination_p2",
             {"keywords": "digital", "funder": "EC", "size": "5", "page": "2"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_large_page_size(self, base_url, snapshot_dir_projects, phase):
+    def test_large_page_size(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "pagination_large",
             {"keywords": "digital", "funder": "EC", "size": "50", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -346,11 +345,11 @@ class TestPagination:
 class TestFP7ScientificArea:
     """Filter FP7 projects by scientific area."""
 
-    def test_fp7_scientific_area(self, base_url, snapshot_dir_projects, phase):
+    def test_fp7_scientific_area(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "fp7_scientific_area",
             {"FP7scientificArea": "health", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -361,11 +360,11 @@ class TestFP7ScientificArea:
 class TestFundingStream:
     """Filter projects by funding stream."""
 
-    def test_funding_stream(self, base_url, snapshot_dir_projects, phase):
+    def test_funding_stream(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "funding_stream_h2020",
             {"fundingStream": "H2020", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
 
@@ -376,11 +375,11 @@ class TestFundingStream:
 class TestXMLFormat:
     """Verify that XML responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, snapshot_dir_projects, phase):
+    def test_xml_keyword_search(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "xml_keyword",
             {"keywords": "artificial intelligence", "funder": "EC", "size": "10", "page": "1"},
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
             fmt="xml",
         )
 
@@ -392,7 +391,7 @@ class TestXMLFormat:
 class TestCombinedFilters:
     """Test queries that combine multiple filter parameters for projects."""
 
-    def test_funder_country_year(self, base_url, snapshot_dir_projects, phase):
+    def test_funder_country_year(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "combined_funder_country_year",
             {
@@ -402,10 +401,10 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_keywords_funder_sorted(self, base_url, snapshot_dir_projects, phase):
+    def test_keywords_funder_sorted(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "combined_kw_funder_sorted",
             {
@@ -415,10 +414,10 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
-    def test_funder_call_country(self, base_url, snapshot_dir_projects, phase):
+    def test_funder_call_country(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
             "combined_funder_call_country",
             {
@@ -428,5 +427,5 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_projects, phase,
+            base_url, endpoint_projects, snapshot_dir_projects, phase,
         )

@@ -30,8 +30,6 @@ from helpers import (
     compare_snapshots,
 )
 
-ENDPOINT = "search/datasets"
-
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -40,6 +38,7 @@ def _run_test(
     test_id: str,
     params: dict,
     base_url: str,
+    endpoint: str,
     snapshot_dir: str,
     phase: str,
     *,
@@ -54,7 +53,7 @@ def _run_test(
     tolerance because different backend instances may have slightly
     different index contents.
     """
-    status, body = query_api(base_url, ENDPOINT, params, fmt=fmt)
+    status, body = query_api(base_url, endpoint, params, fmt=fmt)
     assert status == 200, f"Expected HTTP 200, got {status}"
 
     if fmt == "json":
@@ -84,18 +83,18 @@ def _run_test(
 class TestKeywordSearch:
     """Search datasets by keywords."""
 
-    def test_single_keyword(self, base_url, snapshot_dir_datasets, phase):
+    def test_single_keyword(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "keyword_single",
             {"keywords": "climate", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_multiple_keywords(self, base_url, snapshot_dir_datasets, phase):
+    def test_multiple_keywords(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "keyword_multiple",
             {"keywords": "genome sequencing", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -106,11 +105,11 @@ class TestKeywordSearch:
 class TestDOILookup:
     """Retrieve datasets by DOI."""
 
-    def test_single_doi(self, base_url, snapshot_dir_datasets, phase):
+    def test_single_doi(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "doi_single",
             {"doi": "10.5281/zenodo.3234", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
             loose=False,
         )
 
@@ -122,11 +121,11 @@ class TestDOILookup:
 class TestTitleSearch:
     """Search datasets by title."""
 
-    def test_title(self, base_url, snapshot_dir_datasets, phase):
+    def test_title(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "title_search",
             {"title": "ocean temperature", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -137,11 +136,11 @@ class TestTitleSearch:
 class TestAuthorSearch:
     """Search datasets by author."""
 
-    def test_author(self, base_url, snapshot_dir_datasets, phase):
+    def test_author(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "author_search",
             {"author": "Smith", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -152,11 +151,11 @@ class TestAuthorSearch:
 class TestORCIDSearch:
     """Search datasets by ORCID."""
 
-    def test_orcid(self, base_url, snapshot_dir_datasets, phase):
+    def test_orcid(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "orcid",
             {"orcid": "0000-0002-9079-593X", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -167,7 +166,7 @@ class TestORCIDSearch:
 class TestDateRange:
     """Filter datasets by date range."""
 
-    def test_from_date(self, base_url, snapshot_dir_datasets, phase):
+    def test_from_date(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "date_from",
             {
@@ -176,10 +175,10 @@ class TestDateRange:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_date_range(self, base_url, snapshot_dir_datasets, phase):
+    def test_date_range(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "date_range",
             {
@@ -189,7 +188,7 @@ class TestDateRange:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -200,18 +199,18 @@ class TestDateRange:
 class TestOpenAccess:
     """Filter datasets by Open Access status."""
 
-    def test_open_access_true(self, base_url, snapshot_dir_datasets, phase):
+    def test_open_access_true(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "oa_true",
             {"keywords": "satellite imagery", "OA": "true", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_open_access_false(self, base_url, snapshot_dir_datasets, phase):
+    def test_open_access_false(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "oa_false",
             {"keywords": "satellite imagery", "OA": "false", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -222,25 +221,25 @@ class TestOpenAccess:
 class TestFunderFiltering:
     """Filter datasets by funder."""
 
-    def test_funder_ec(self, base_url, snapshot_dir_datasets, phase):
+    def test_funder_ec(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "funder_ec",
             {"funder": "EC", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_funder_nsf(self, base_url, snapshot_dir_datasets, phase):
+    def test_funder_nsf(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "funder_nsf",
             {"funder": "NSF", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_has_ec_funding_true(self, base_url, snapshot_dir_datasets, phase):
+    def test_has_ec_funding_true(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "has_ec_funding_true",
             {"hasECFunding": "true", "keywords": "energy", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -251,18 +250,18 @@ class TestFunderFiltering:
 class TestCountryFiltering:
     """Filter datasets by country."""
 
-    def test_country_de(self, base_url, snapshot_dir_datasets, phase):
+    def test_country_de(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "country_de",
             {"country": "DE", "keywords": "ecology", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_country_gb(self, base_url, snapshot_dir_datasets, phase):
+    def test_country_gb(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "country_gb",
             {"country": "GB", "keywords": "meteorology", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -273,7 +272,7 @@ class TestCountryFiltering:
 class TestSorting:
     """Verify sorted result ordering is preserved."""
 
-    def test_sort_by_date_descending(self, base_url, snapshot_dir_datasets, phase):
+    def test_sort_by_date_descending(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "sort_date_desc",
             {
@@ -282,10 +281,10 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_sort_by_date_ascending(self, base_url, snapshot_dir_datasets, phase):
+    def test_sort_by_date_ascending(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "sort_date_asc",
             {
@@ -294,7 +293,7 @@ class TestSorting:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -305,25 +304,25 @@ class TestSorting:
 class TestPagination:
     """Ensure pagination returns consistent slices."""
 
-    def test_page_1(self, base_url, snapshot_dir_datasets, phase):
+    def test_page_1(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "pagination_p1",
             {"keywords": "geophysics", "size": "5", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_page_2(self, base_url, snapshot_dir_datasets, phase):
+    def test_page_2(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "pagination_p2",
             {"keywords": "geophysics", "size": "5", "page": "2"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_large_page_size(self, base_url, snapshot_dir_datasets, phase):
+    def test_large_page_size(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "pagination_large",
             {"keywords": "geophysics", "size": "50", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -334,32 +333,32 @@ class TestPagination:
 class TestImpactIndicators:
     """Filter datasets by bibliometric impact indicators."""
 
-    def test_influence_c1(self, base_url, snapshot_dir_datasets, phase):
+    def test_influence_c1(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "influence_c1",
             {"influence": "C1", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_popularity_c2(self, base_url, snapshot_dir_datasets, phase):
+    def test_popularity_c2(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "popularity_c2",
             {"popularity": "C2", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_citation_count_c3(self, base_url, snapshot_dir_datasets, phase):
+    def test_citation_count_c3(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "citation_count_c3",
             {"citationCount": "C3", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_impulse_c1(self, base_url, snapshot_dir_datasets, phase):
+    def test_impulse_c1(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "impulse_c1",
             {"impulse": "C1", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -370,11 +369,11 @@ class TestImpactIndicators:
 class TestProjectLinked:
     """Search for datasets linked to projects."""
 
-    def test_has_project_true(self, base_url, snapshot_dir_datasets, phase):
+    def test_has_project_true(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "has_project_true",
             {"hasProject": "true", "keywords": "sensor data", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -385,7 +384,7 @@ class TestProjectLinked:
 class TestProviderFiltering:
     """Filter by data provider."""
 
-    def test_provider_zenodo(self, base_url, snapshot_dir_datasets, phase):
+    def test_provider_zenodo(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "provider_zenodo",
             {
@@ -394,7 +393,7 @@ class TestProviderFiltering:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
 
@@ -405,11 +404,11 @@ class TestProviderFiltering:
 class TestXMLFormat:
     """Verify that XML responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, snapshot_dir_datasets, phase):
+    def test_xml_keyword_search(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "xml_keyword",
             {"keywords": "hydrology", "size": "10", "page": "1"},
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
             fmt="xml",
         )
 
@@ -421,7 +420,7 @@ class TestXMLFormat:
 class TestCombinedFilters:
     """Test queries that combine multiple filter parameters."""
 
-    def test_keyword_oa_country_date(self, base_url, snapshot_dir_datasets, phase):
+    def test_keyword_oa_country_date(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "combined_kw_oa_country_date",
             {
@@ -433,10 +432,10 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
-    def test_funder_sorted(self, base_url, snapshot_dir_datasets, phase):
+    def test_funder_sorted(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
             "combined_funder_sorted",
             {
@@ -446,5 +445,5 @@ class TestCombinedFilters:
                 "size": "10",
                 "page": "1",
             },
-            base_url, snapshot_dir_datasets, phase,
+            base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
