@@ -18,6 +18,8 @@ Run with::
     pytest test_datasets_contract.py --phase=compare -v
 """
 
+import os
+
 import pytest
 
 from helpers import (
@@ -53,8 +55,8 @@ def _run_test(
     tolerance because different backend instances may have slightly
     different index contents.
     """
-    status, body = query_api(base_url, endpoint, params, fmt=fmt)
-    assert status == 200, f"Expected HTTP 200, got {status}"
+    status, body, request_url = query_api(base_url, endpoint, params, fmt=fmt)
+    assert status == 200, f"Expected HTTP 200, got {status}\n  URL: {request_url}"
 
     if fmt == "json":
         current = normalise_json_response(body)
@@ -64,6 +66,10 @@ def _run_test(
     if phase == "record":
         save_snapshot(snapshot_dir, test_id, params=params, normalised=current)
     else:
+        compare_dir = snapshot_dir.rstrip('/') + '_compare'
+        os.makedirs(compare_dir, exist_ok=True)
+        save_snapshot(compare_dir, test_id, params=params, normalised=current)
+
         baseline_data = load_snapshot(snapshot_dir, test_id)
         baseline = baseline_data["normalised"]
         diffs = compare_snapshots(
@@ -72,7 +78,9 @@ def _run_test(
             loose=loose,
         )
         assert not diffs, (
-            "Contract differences detected:\n" + "\n".join(f"  • {d}" for d in diffs)
+            f"Contract differences detected:\n"
+            f"  URL: {request_url}\n"
+            + "\n".join(f"  • {d}" for d in diffs)
         )
 
 

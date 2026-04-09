@@ -56,13 +56,14 @@ def query_api(
     params: Dict[str, Any],
     *,
     fmt: str = "json",
-) -> Tuple[int, Any]:
+) -> Tuple[int, Any, str]:
     """
     Query the OpenAIRE Search API.
 
-    Returns (http_status_code, parsed_body).
+    Returns (http_status_code, parsed_body, request_url).
     For ``fmt="json"`` the body is a Python dict; for ``fmt="xml"`` it is the
     raw XML text so that we can compare it structurally.
+    ``request_url`` is the full URL with query parameters as sent to the server.
     """
     url = f"{base_url.rstrip('/')}/{path.lstrip('/')}"
     merged = {**params, "format": fmt}
@@ -77,9 +78,9 @@ def query_api(
                 time.sleep(RETRY_DELAY * attempt)
                 continue
             if fmt == "json":
-                return resp.status_code, resp.json()
+                return resp.status_code, resp.json(), resp.url
             else:
-                return resp.status_code, resp.text
+                return resp.status_code, resp.text, resp.url
         except (requests.ConnectionError, requests.Timeout) as exc:
             last_exc = exc
             if attempt < RETRY_COUNT:
