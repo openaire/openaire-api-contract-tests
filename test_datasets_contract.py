@@ -44,7 +44,7 @@ def _run_test(
     snapshot_dir: str,
     phase: str,
     *,
-    fmt: str = "json",
+    fmt: str = "xml",
     total_tolerance_pct: float = DEFAULT_TOTAL_TOLERANCE_PCT,
     loose: bool = True,
 ):
@@ -93,14 +93,14 @@ class TestKeywordSearch:
 
     def test_single_keyword(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "keyword_single",
+            "single_keyword",
             {"keywords": "climate", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
     def test_multiple_keywords(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "keyword_multiple",
+            "multiple_keywords",
             {"keywords": "genome sequencing", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
@@ -115,7 +115,7 @@ class TestDOILookup:
 
     def test_single_doi(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "doi_single",
+            "single_doi",
             {"doi": "10.5281/zenodo.3234", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
             loose=False,
@@ -131,7 +131,7 @@ class TestTitleSearch:
 
     def test_title(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "title_search",
+            "title",
             {"title": "ocean temperature", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
@@ -146,7 +146,7 @@ class TestAuthorSearch:
 
     def test_author(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "author_search",
+            "author",
             {"author": "Smith", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
@@ -176,7 +176,7 @@ class TestDateRange:
 
     def test_from_date(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "date_from",
+            "from_date",
             {
                 "keywords": "biodiversity",
                 "fromDateAccepted": "2023-01-01",
@@ -209,14 +209,14 @@ class TestOpenAccess:
 
     def test_open_access_true(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "oa_true",
+            "open_access_true",
             {"keywords": "satellite imagery", "OA": "true", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
     def test_open_access_false(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "oa_false",
+            "open_access_false",
             {"keywords": "satellite imagery", "OA": "false", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
@@ -282,7 +282,7 @@ class TestSorting:
 
     def test_sort_by_date_descending(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "sort_date_desc",
+            "sort_by_date_descending",
             {
                 "keywords": "proteomics",
                 "sortBy": "resultdateofacceptance,descending",
@@ -294,7 +294,7 @@ class TestSorting:
 
     def test_sort_by_date_ascending(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "sort_date_asc",
+            "sort_by_date_ascending",
             {
                 "keywords": "proteomics",
                 "sortBy": "resultdateofacceptance,ascending",
@@ -314,21 +314,21 @@ class TestPagination:
 
     def test_page_1(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "pagination_p1",
+            "page_1",
             {"keywords": "geophysics", "size": "5", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
     def test_page_2(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "pagination_p2",
+            "page_2",
             {"keywords": "geophysics", "size": "5", "page": "2"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
 
     def test_large_page_size(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "pagination_large",
+            "large_page_size",
             {"keywords": "geophysics", "size": "50", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
         )
@@ -409,15 +409,15 @@ class TestProviderFiltering:
 # 15. XML format
 # ===================================================================
 
-class TestXMLFormat:
-    """Verify that XML responses maintain the same contract."""
+class TestJSONFormat:
+    """Verify that JSON responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
+    def test_json_keyword_search(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "xml_keyword",
+            "json_keyword_search",
             {"keywords": "hydrology", "size": "10", "page": "1"},
             base_url, endpoint_datasets, snapshot_dir_datasets, phase,
-            fmt="xml",
+            fmt="json",
         )
 
 
@@ -430,7 +430,7 @@ class TestCombinedFilters:
 
     def test_keyword_oa_country_date(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "combined_kw_oa_country_date",
+            "keyword_oa_country_date",
             {
                 "keywords": "soil moisture",
                 "OA": "true",
@@ -445,7 +445,7 @@ class TestCombinedFilters:
 
     def test_funder_sorted(self, base_url, endpoint_datasets, snapshot_dir_datasets, phase):
         _run_test(
-            "combined_funder_sorted",
+            "funder_sorted",
             {
                 "funder": "EC",
                 "keywords": "environment",

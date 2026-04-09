@@ -93,8 +93,11 @@ Each test file exercises:
 - **Influence / popularity / citation count / impulse**
 - **Project link** (`hasProject`)
 - **Provider filtering** (`openaireProviderID`)
-- **Response format** (`format=json`, `format=xml`)
 - **Combined filters** (multiple parameters together)
+- **JSON response format** (dedicated `TestJSONFormat` class)
+
+All tests use **XML** as the default response format.  A dedicated
+`TestJSONFormat` test class in each file verifies JSON output as well.
 
 The **publications** test file additionally covers:
 - **Peer-reviewed** (`peerReviewed`)
@@ -123,15 +126,20 @@ The projects endpoint has a distinct parameter set and metadata schema:
 - **Funding stream** (`fundingStream`)
 - **Sorting** (`sortBy` with project-specific fields)
 - **Pagination** (`page`, `size`)
-- **Response format** (`format=json`, `format=xml`)
 - **Combined filters**
+- **JSON response format** (dedicated `TestJSONFormat` class)
 
 ## Snapshot format
 
-Each snapshot is a JSON file named after the test case, stored in the
-appropriate per-endpoint directory (e.g. `snapshots_publications/`,
-`snapshots_projects/`).  The file contains the query parameters used and the
-normalised response (result identifiers + key metadata).
+Each snapshot is a JSON file whose name matches the pytest test method
+(without the `test_` prefix), e.g. the test `test_single_keyword` produces
+`single_keyword.json`.  Files are stored in the per-endpoint directory
+(e.g. `snapshots_publications/`, `snapshots_projects/`) and contain the query
+parameters used and the normalised response (result identifiers + key metadata).
+
+During the *compare* phase the current API response is also saved to a
+`_compare`-suffixed directory (e.g. `snapshots_publications_compare/`) so that
+baseline and live responses can be diffed manually when a test fails.
 
 ## Comparison logic
 

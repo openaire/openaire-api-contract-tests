@@ -44,7 +44,7 @@ def _run_test(
     snapshot_dir: str,
     phase: str,
     *,
-    fmt: str = "json",
+    fmt: str = "xml",
     total_tolerance_pct: float = DEFAULT_TOTAL_TOLERANCE_PCT,
     loose: bool = True,
 ):
@@ -87,14 +87,14 @@ class TestKeywordSearch:
 
     def test_single_keyword(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "keyword_single",
+            "single_keyword",
             {"keywords": "python", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
 
     def test_multiple_keywords(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "keyword_multiple",
+            "multiple_keywords",
             {"keywords": "machine learning library", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
@@ -109,7 +109,7 @@ class TestDOILookup:
 
     def test_single_doi(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "doi_single",
+            "single_doi",
             {"doi": "10.5281/zenodo.1234", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
             loose=False,
@@ -125,7 +125,7 @@ class TestTitleSearch:
 
     def test_title(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "title_search",
+            "title",
             {"title": "data processing pipeline", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
@@ -140,7 +140,7 @@ class TestAuthorSearch:
 
     def test_author(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "author_search",
+            "author",
             {"author": "Garcia", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
@@ -170,7 +170,7 @@ class TestDateRange:
 
     def test_from_date(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "date_from",
+            "from_date",
             {
                 "keywords": "simulation",
                 "fromDateAccepted": "2023-01-01",
@@ -203,14 +203,14 @@ class TestOpenAccess:
 
     def test_open_access_true(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "oa_true",
+            "open_access_true",
             {"keywords": "analysis tool", "OA": "true", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
 
     def test_open_access_false(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "oa_false",
+            "open_access_false",
             {"keywords": "analysis tool", "OA": "false", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
@@ -269,7 +269,7 @@ class TestSorting:
 
     def test_sort_by_date_descending(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "sort_date_desc",
+            "sort_by_date_descending",
             {
                 "keywords": "bioinformatics",
                 "sortBy": "resultdateofacceptance,descending",
@@ -281,7 +281,7 @@ class TestSorting:
 
     def test_sort_by_date_ascending(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "sort_date_asc",
+            "sort_by_date_ascending",
             {
                 "keywords": "bioinformatics",
                 "sortBy": "resultdateofacceptance,ascending",
@@ -301,21 +301,21 @@ class TestPagination:
 
     def test_page_1(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "pagination_p1",
+            "page_1",
             {"keywords": "framework", "size": "5", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
 
     def test_page_2(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "pagination_p2",
+            "page_2",
             {"keywords": "framework", "size": "5", "page": "2"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
 
     def test_large_page_size(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "pagination_large",
+            "large_page_size",
             {"keywords": "framework", "size": "50", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
         )
@@ -396,15 +396,15 @@ class TestProviderFiltering:
 # 15. XML format
 # ===================================================================
 
-class TestXMLFormat:
-    """Verify that XML responses maintain the same contract."""
+class TestJSONFormat:
+    """Verify that JSON responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, endpoint_software, snapshot_dir_software, phase):
+    def test_json_keyword_search(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "xml_keyword",
+            "json_keyword_search",
             {"keywords": "workflow", "size": "10", "page": "1"},
             base_url, endpoint_software, snapshot_dir_software, phase,
-            fmt="xml",
+            fmt="json",
         )
 
 
@@ -417,7 +417,7 @@ class TestCombinedFilters:
 
     def test_keyword_oa_country_date(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "combined_kw_oa_country_date",
+            "keyword_oa_country_date",
             {
                 "keywords": "image processing",
                 "OA": "true",
@@ -432,7 +432,7 @@ class TestCombinedFilters:
 
     def test_funder_sorted(self, base_url, endpoint_software, snapshot_dir_software, phase):
         _run_test(
-            "combined_funder_sorted",
+            "funder_sorted",
             {
                 "funder": "EC",
                 "keywords": "data analysis",

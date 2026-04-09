@@ -44,7 +44,7 @@ def _run_test(
     snapshot_dir: str,
     phase: str,
     *,
-    fmt: str = "json",
+    fmt: str = "xml",
     total_tolerance_pct: float = DEFAULT_TOTAL_TOLERANCE_PCT,
     loose: bool = True,
 ):
@@ -98,14 +98,14 @@ class TestKeywordSearch:
 
     def test_single_keyword(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "keyword_single",
+            "single_keyword",
             {"keywords": "covid", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_multiple_keywords(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "keyword_multiple",
+            "multiple_keywords",
             {"keywords": "machine learning genomics", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -120,14 +120,14 @@ class TestDOILookup:
 
     def test_single_doi(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "doi_single",
+            "single_doi",
             {"doi": "10.1038/s41586-020-2649-2", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_multiple_dois(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "doi_multiple",
+            "multiple_dois",
             {
                 "doi": "10.1038/s41586-020-2649-2,10.1126/science.abc4730",
                 "size": "10",
@@ -161,7 +161,7 @@ class TestTitleSearch:
 
     def test_title(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "title_search",
+            "title",
             {"title": "deep learning protein structure", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -176,7 +176,7 @@ class TestAuthorSearch:
 
     def test_author(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "author_search",
+            "author",
             {"author": "John Smith", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -191,7 +191,7 @@ class TestDateRange:
 
     def test_from_date(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "date_from",
+            "from_date",
             {
                 "keywords": "climate change",
                 "fromDateAccepted": "2023-01-01",
@@ -224,14 +224,14 @@ class TestOpenAccess:
 
     def test_open_access_true(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "oa_true",
+            "open_access_true",
             {"keywords": "quantum computing", "OA": "true", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_open_access_false(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "oa_false",
+            "open_access_false",
             {"keywords": "quantum computing", "OA": "false", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -304,7 +304,7 @@ class TestSorting:
 
     def test_sort_by_date_descending(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "sort_date_desc",
+            "sort_by_date_descending",
             {
                 "keywords": "CRISPR",
                 "sortBy": "resultdateofacceptance,descending",
@@ -316,7 +316,7 @@ class TestSorting:
 
     def test_sort_by_date_ascending(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "sort_date_asc",
+            "sort_by_date_ascending",
             {
                 "keywords": "CRISPR",
                 "sortBy": "resultdateofacceptance,ascending",
@@ -336,21 +336,21 @@ class TestPagination:
 
     def test_page_1(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "pagination_p1",
+            "page_1",
             {"keywords": "nanotechnology", "size": "5", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_page_2(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "pagination_p2",
+            "page_2",
             {"keywords": "nanotechnology", "size": "5", "page": "2"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_large_page_size(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "pagination_large",
+            "large_page_size",
             {"keywords": "nanotechnology", "size": "50", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -417,7 +417,7 @@ class TestGreenOA:
 
     def test_green_true(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "green_oa_true",
+            "green_true",
             {"green": "true", "keywords": "neuroscience", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -432,14 +432,14 @@ class TestOAColor:
 
     def test_gold(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "oa_color_gold",
+            "gold",
             {"openAccessColor": "gold", "keywords": "cancer", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_hybrid(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "oa_color_hybrid",
+            "hybrid",
             {"openAccessColor": "hybrid", "keywords": "cancer", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -454,14 +454,14 @@ class TestSDG:
 
     def test_sdg_3_health(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "sdg_3",
+            "sdg_3_health",
             {"sdg": "3", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
 
     def test_sdg_13_climate(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "sdg_13",
+            "sdg_13_climate",
             {"sdg": "13", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
         )
@@ -527,7 +527,7 @@ class TestOpenairePublicationID:
 
     def test_openaire_id(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "openaire_pub_id",
+            "openaire_id",
             {
                 "openairePublicationID": "doi_dedup___::b91639a733694c00946368b7bb76a70f",
                 "size": "10",
@@ -569,7 +569,7 @@ class TestProviderFiltering:
     def test_provider(self, base_url, endpoint, snapshot_dir_publications, phase):
         # Using the OpenAIRE provider ID for Zenodo
         _run_test(
-            "provider_zenodo",
+            "provider",
             {
                 "openaireProviderID": "opendoar____::358aee4cc897452c00244351e4d91f69",
                 "keywords": "software",
@@ -581,18 +581,18 @@ class TestProviderFiltering:
 
 
 # ===================================================================
-# 23. Response format – XML
+# 23. Response format – JSON
 # ===================================================================
 
-class TestXMLFormat:
-    """Verify that XML responses maintain the same contract."""
+class TestJSONFormat:
+    """Verify that JSON responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, endpoint, snapshot_dir_publications, phase):
+    def test_json_keyword_search(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "xml_keyword",
+            "json_keyword_search",
             {"keywords": "blockchain", "size": "10", "page": "1"},
             base_url, endpoint, snapshot_dir_publications, phase,
-            fmt="xml",
+            fmt="json",
         )
 
 
@@ -605,7 +605,7 @@ class TestCombinedFilters:
 
     def test_keyword_oa_country_date(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "combined_kw_oa_country_date",
+            "keyword_oa_country_date",
             {
                 "keywords": "robotics",
                 "OA": "true",
@@ -620,7 +620,7 @@ class TestCombinedFilters:
 
     def test_funder_peer_reviewed_sorted(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "combined_funder_pr_sorted",
+            "funder_peer_reviewed_sorted",
             {
                 "funder": "EC",
                 "peerReviewed": "true",
@@ -634,7 +634,7 @@ class TestCombinedFilters:
 
     def test_sdg_green_diamond(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "combined_sdg_green_diamond",
+            "sdg_green_diamond",
             {
                 "sdg": "7",
                 "green": "true",
@@ -647,7 +647,7 @@ class TestCombinedFilters:
 
     def test_influence_oa_color_country(self, base_url, endpoint, snapshot_dir_publications, phase):
         _run_test(
-            "combined_influence_oacolor_country",
+            "influence_oa_color_country",
             {
                 "influence": "C1",
                 "openAccessColor": "gold",

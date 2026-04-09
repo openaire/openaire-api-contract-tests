@@ -49,7 +49,7 @@ def _run_test(
     snapshot_dir: str,
     phase: str,
     *,
-    fmt: str = "json",
+    fmt: str = "xml",
     total_tolerance_pct: float = DEFAULT_TOTAL_TOLERANCE_PCT,
     loose: bool = True,
 ):
@@ -96,14 +96,14 @@ class TestKeywordSearch:
 
     def test_single_keyword(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "keyword_single",
+            "single_keyword",
             {"keywords": "health", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
     def test_multiple_keywords(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "keyword_multiple",
+            "multiple_keywords",
             {"keywords": "renewable energy transition", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
@@ -134,7 +134,7 @@ class TestNameSearch:
 
     def test_name(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "name_search",
+            "name",
             {"name": "Open Science", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
@@ -149,7 +149,7 @@ class TestAcronymSearch:
 
     def test_acronym(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "acronym_search",
+            "acronym",
             {"acronym": "OpenAIRE", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
             loose=False,
@@ -223,14 +223,14 @@ class TestYearFiltering:
 
     def test_start_year(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "start_year_2020",
+            "start_year",
             {"startYear": "2020", "funder": "EC", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
     def test_end_year(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "end_year_2023",
+            "end_year",
             {"endYear": "2023", "funder": "EC", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
@@ -267,7 +267,7 @@ class TestParticipantAcronyms:
 
     def test_participant_acronym(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "participant_acronym_cern",
+            "participant_acronym",
             {"participantAcronyms": "CERN", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
@@ -282,7 +282,7 @@ class TestSorting:
 
     def test_sort_by_start_date_desc(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "sort_startdate_desc",
+            "sort_by_start_date_desc",
             {
                 "keywords": "climate",
                 "sortBy": "projectstartdate,descending",
@@ -294,7 +294,7 @@ class TestSorting:
 
     def test_sort_by_start_date_asc(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "sort_startdate_asc",
+            "sort_by_start_date_asc",
             {
                 "keywords": "climate",
                 "sortBy": "projectstartdate,ascending",
@@ -306,7 +306,7 @@ class TestSorting:
 
     def test_sort_by_end_date_desc(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "sort_enddate_desc",
+            "sort_by_end_date_desc",
             {
                 "keywords": "climate",
                 "sortBy": "projectenddate,descending",
@@ -326,21 +326,21 @@ class TestPagination:
 
     def test_page_1(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "pagination_p1",
+            "page_1",
             {"keywords": "digital", "funder": "EC", "size": "5", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
     def test_page_2(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "pagination_p2",
+            "page_2",
             {"keywords": "digital", "funder": "EC", "size": "5", "page": "2"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
 
     def test_large_page_size(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "pagination_large",
+            "large_page_size",
             {"keywords": "digital", "funder": "EC", "size": "50", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
@@ -370,7 +370,7 @@ class TestFundingStream:
 
     def test_funding_stream(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "funding_stream_h2020",
+            "funding_stream",
             {"fundingStream": "H2020", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
         )
@@ -380,15 +380,15 @@ class TestFundingStream:
 # 14. XML format
 # ===================================================================
 
-class TestXMLFormat:
-    """Verify that XML responses maintain the same contract."""
+class TestJSONFormat:
+    """Verify that JSON responses maintain the same contract."""
 
-    def test_xml_keyword_search(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
+    def test_json_keyword_search(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "xml_keyword",
+            "json_keyword_search",
             {"keywords": "artificial intelligence", "funder": "EC", "size": "10", "page": "1"},
             base_url, endpoint_projects, snapshot_dir_projects, phase,
-            fmt="xml",
+            fmt="json",
         )
 
 
@@ -401,7 +401,7 @@ class TestCombinedFilters:
 
     def test_funder_country_year(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "combined_funder_country_year",
+            "funder_country_year",
             {
                 "funder": "EC",
                 "participantCountries": "DE",
@@ -414,7 +414,7 @@ class TestCombinedFilters:
 
     def test_keywords_funder_sorted(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "combined_kw_funder_sorted",
+            "keywords_funder_sorted",
             {
                 "keywords": "sustainability",
                 "funder": "EC",
@@ -427,7 +427,7 @@ class TestCombinedFilters:
 
     def test_funder_call_country(self, base_url, endpoint_projects, snapshot_dir_projects, phase):
         _run_test(
-            "combined_funder_call_country",
+            "funder_call_country",
             {
                 "funder": "EC",
                 "callID": "H2020-MSCA-IF-2014",
