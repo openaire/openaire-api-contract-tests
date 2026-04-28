@@ -178,7 +178,9 @@ def endpoint_publications(request):
 def endpoint_datasets(request):
     return (
         request.config.getoption("--endpoint-datasets")
+        or request.config.getoption("--endpoint")
         or os.environ.get("OPENAIRE_ENDPOINT_DATASETS")
+        or os.environ.get("OPENAIRE_ENDPOINT")
         or "search/datasets"
     )
 
@@ -187,7 +189,9 @@ def endpoint_datasets(request):
 def endpoint_software(request):
     return (
         request.config.getoption("--endpoint-software")
+        or request.config.getoption("--endpoint")
         or os.environ.get("OPENAIRE_ENDPOINT_SOFTWARE")
+        or os.environ.get("OPENAIRE_ENDPOINT")
         or "search/software"
     )
 
@@ -196,7 +200,9 @@ def endpoint_software(request):
 def endpoint_other(request):
     return (
         request.config.getoption("--endpoint-other")
+        or request.config.getoption("--endpoint")
         or os.environ.get("OPENAIRE_ENDPOINT_OTHER")
+        or os.environ.get("OPENAIRE_ENDPOINT")
         or "search/other"
     )
 
@@ -205,6 +211,8 @@ def endpoint_other(request):
 def endpoint_projects(request):
     return (
         request.config.getoption("--endpoint-projects")
+        or request.config.getoption("--endpoint")
         or os.environ.get("OPENAIRE_ENDPOINT_PROJECTS")
+        or os.environ.get("OPENAIRE_ENDPOINT")
         or "search/projects"
     )
