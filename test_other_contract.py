@@ -49,7 +49,7 @@ def _run_test(
     loose: bool = True,
 ):
     """Core test driver – loose comparison by default."""
-    status, body, request_url = query_api(base_url, endpoint, params, fmt=fmt)
+    status, body, request_url, response_time_ms = query_api(base_url, endpoint, params, fmt=fmt)
     assert status == 200, f"Expected HTTP 200, got {status}\n  URL: {request_url}"
 
     if fmt == "json":
@@ -57,12 +57,14 @@ def _run_test(
     else:
         current = normalise_xml_response(body)
 
+    print(f"  [timing] {test_id}: {response_time_ms:.0f} ms")
+
     if phase == "record":
-        save_snapshot(snapshot_dir, test_id, params=params, normalised=current)
+        save_snapshot(snapshot_dir, test_id, params=params, normalised=current, response_time_ms=response_time_ms)
     else:
         compare_dir = snapshot_dir.rstrip('/') + '_compare'
         os.makedirs(compare_dir, exist_ok=True)
-        save_snapshot(compare_dir, test_id, params=params, normalised=current)
+        save_snapshot(compare_dir, test_id, params=params, normalised=current, response_time_ms=response_time_ms)
 
         baseline_data = load_snapshot(snapshot_dir, test_id)
         baseline = baseline_data["normalised"]
@@ -74,13 +76,8 @@ def _run_test(
         assert not diffs, (
             f"Contract differences detected:\n"
             f"  URL: {request_url}\n"
-            + "\n".join(f"  • {d}" for d in diffs)
+            + "\n".join(f"  \u2022 {d}" for d in diffs)
         )
-
-
-# ===================================================================
-# 1. Keyword search
-# ===================================================================
 
 class TestKeywordSearch:
     """Search other research products by keywords."""

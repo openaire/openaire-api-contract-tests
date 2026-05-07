@@ -58,7 +58,7 @@ def _run_test(
 
     Uses project-specific normalisers and loose comparison by default.
     """
-    status, body, request_url = query_api(base_url, endpoint, params, fmt=fmt)
+    status, body, request_url, response_time_ms = query_api(base_url, endpoint, params, fmt=fmt)
     assert status == 200, f"Expected HTTP 200, got {status}\n  URL: {request_url}"
 
     if fmt == "json":
@@ -66,12 +66,14 @@ def _run_test(
     else:
         current = normalise_project_xml_response(body)
 
+    print(f"  [timing] {test_id}: {response_time_ms:.0f} ms")
+
     if phase == "record":
-        save_snapshot(snapshot_dir, test_id, params=params, normalised=current)
+        save_snapshot(snapshot_dir, test_id, params=params, normalised=current, response_time_ms=response_time_ms)
     else:
         compare_dir = snapshot_dir.rstrip('/') + '_compare'
         os.makedirs(compare_dir, exist_ok=True)
-        save_snapshot(compare_dir, test_id, params=params, normalised=current)
+        save_snapshot(compare_dir, test_id, params=params, normalised=current, response_time_ms=response_time_ms)
 
         baseline_data = load_snapshot(snapshot_dir, test_id)
         baseline = baseline_data["normalised"]

@@ -8,9 +8,12 @@ as well as the project-specific endpoint with its distinct metadata schema.
 
 import hashlib
 import json
+import logging
 import os
 import time
 from typing import Any, Dict, List, Optional, Tuple
+
+logger = logging.getLogger(__name__)
 
 import requests
 from lxml import etree
@@ -56,14 +59,16 @@ def query_api(
     params: Dict[str, Any],
     *,
     fmt: str = "json",
-) -> Tuple[int, Any, str]:
+) -> Tuple[int, Any, str, float]:
     """
     Query the OpenAIRE Search API.
 
-    Returns (http_status_code, parsed_body, request_url).
+    Returns (http_status_code, parsed_body, request_url, response_time_ms).
     For ``fmt="json"`` the body is a Python dict; for ``fmt="xml"`` it is the
     raw XML text so that we can compare it structurally.
     ``request_url`` is the full URL with query parameters as sent to the server.
+    ``response_time_ms`` is the elapsed wall-clock time for the HTTP request in
+    milliseconds (excluding retry delays).
     """
     url = f"{base_url.rstrip('/')}/{path.lstrip('/')}"
     merged = {**params, "format": fmt}
@@ -73,14 +78,24 @@ def query_api(
 
     for attempt in range(1, RETRY_COUNT + 1):
         try:
+            t0 = time.monotonic()
             resp = session.get(url, params=merged, timeout=REQUEST_TIMEOUT)
+            response_time_ms = (time.monotonic() - t0) * 1000
             if resp.status_code in (429, 500, 502, 503, 504) and attempt < RETRY_COUNT:
                 time.sleep(RETRY_DELAY * attempt)
                 continue
+            logger.info(
+                "[%s] %s params=%s  status=%d  time=%.0f ms",
+                fmt.upper(),
+                resp.url,
+                params,
+                resp.status_code,
+                response_time_ms,
+            )
             if fmt == "json":
-                return resp.status_code, resp.json(), resp.url
+                return resp.status_code, resp.json(), resp.url, response_time_ms
             else:
-                return resp.status_code, resp.text, resp.url
+                return resp.status_code, resp.text, resp.url, response_time_ms
         except (requests.ConnectionError, requests.Timeout) as exc:
             last_exc = exc
             if attempt < RETRY_COUNT:
@@ -466,9 +481,18 @@ def _snapshot_path(snapshot_dir: str, test_id: str) -> str:
     return os.path.join(snapshot_dir, f"{safe}.json")
 
 
-def save_snapshot(snapshot_dir: str, test_id: str, *, params: dict, normalised: dict):
+def save_snapshot(
+    snapshot_dir: str,
+    test_id: str,
+    *,
+    params: dict,
+    normalised: dict,
+    response_time_ms: Optional[float] = None,
+):
     path = _snapshot_path(snapshot_dir, test_id)
-    payload = {"params": params, "normalised": normalised}
+    payload: Dict[str, Any] = {"params": params, "normalised": normalised}
+    if response_time_ms is not None:
+        payload["response_time_ms"] = round(response_time_ms, 1)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False, sort_keys=True)
 
